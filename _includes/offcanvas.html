@@ -1,0 +1,19 @@
+<div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
+        <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
+        <ul class="uk-nav uk-nav-default">
+            {% for item in site.data.navleft %}
+              <li {% if page.url == item.link %}class="uk-active"{% endif %}><a href="{{ item.link }}" >{{ item.name }}</a>
+            {% endfor %}
+            <li>More</li>
+            <li class="uk-parent">
+                <ul class="uk-nav-sub">
+                    <li><a href="#">Sub item</a></li>
+                    <li><a href="#">Sub item</a></li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Latest:</h3>
+        <p>How to Start a Blog In The Most Cluttered Marketplace In History | <a class="uk-link-text uk-text-meta" href="#">see more</a></p>
+    </div>
+</div>

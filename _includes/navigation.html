@@ -1,0 +1,46 @@
+<!--HEADER
+<nav>
+  {% for item in site.data.navigation %}
+    <li {% if page.url == item.link %}class="current"{% endif %}><a href="{{ item.link }}" >{{ item.name }}</a>
+  {% endfor %}
+</nav>
+-->
+<header data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top">
+    <div id="particles-js" class="particles-main"></div>
+    <div class="uk-container">
+        <nav id="navbar" class=" uk-margin header" uk-navbar>
+            <div class="uk-navbar-center">
+                <div class="uk-navbar-center-left uk-visible@m"><div>
+                    <ul class="uk-navbar-nav">
+                      {% for item in site.data.navleft %}
+                        <li {% if page.url == item.link %}class="uk-active"{% endif %}><a href="{{ item.link }}" >{{ item.name }}</a>
+                      {% endfor %}
+                    </ul>
+                    </div></div>
+                <a class="uk-navbar-item uk-logo logo-main uk-text-middle" href="/">RYAN COOK</a>
+                <div class="uk-navbar-center-right uk-visible@m">
+                    <div>
+                        <ul class="uk-navbar-nav">
+                          <li>
+                              <a href="#">More</a>
+                              <div class="uk-navbar-dropdown">
+                                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                                      <li class="uk-active"><a href="#">Active</a></li>
+                                      <li><a href="#">Item</a></li>
+                                      <li><a href="#">Item</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-navbar-right uk-hidden@m">
+                <div class="uk-navbar-item">
+                    <a class="uk-navbar-toggle" data-uk-toggle data-uk-navbar-toggle-icon ratio="1.25" href="#offcanvas-nav"></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<!--/HEADER-->

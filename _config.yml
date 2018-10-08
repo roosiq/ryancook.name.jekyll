@@ -1,0 +1,26 @@
+collections:
+  notes:
+    output: true
+  thoughts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "thoughts"
+    values:
+      layout: "thought"
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "note"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
