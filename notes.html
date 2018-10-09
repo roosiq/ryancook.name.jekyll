@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Notes
 ---
 <div class="uk-background-muted">
 
@@ -19,7 +20,7 @@ layout: default
         <div class="uk-container uk-container-small uk-margin-top uk-margin-medium-bottom">
             <dl class="uk-description-list uk-description-list-divider">
               {% for note in site.notes %}
-                <dt><h6 class="uk-text-uppercase uk-margin-remove-bottom"><a class="uk-link-heading uk-text-bold" href="{{ note.url }}">{{ note.name }}</a></h6></dt>
+                <dt><h6 class="uk-text-uppercase uk-margin-remove-bottom"><a class="uk-link-heading uk-text-bold" href="{{ note.url | downcase }}">{{ note.name }}</a></h6></dt>
                 <dd>{{ note.content | markdownify }}</dd>
               {% endfor %}
             </dl>

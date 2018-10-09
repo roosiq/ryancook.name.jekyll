@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="uk-background-muted">
+
+    <div class="uk-section uk-background-cover" style="background-image: url(http://picsum.photos/g/1920/480); height: 40vh; background-repeat: no-repeat;"></div>
+
+    <div class="uk-container uk-padding">
+        <div class="uk-background-default uk-padding-large" style="margin-top: -150px">
+            <div>
+                 <h1 class="uk-text-bold uk-heading-hero">Notes</h1>
+            </div>
+            <div>
+                <p>Just a big, organized list of links that I've saved for reference, categorized below.</p>
+            </div>
+        </div>
+    </div>
+
+    {% for tag in site.tags %}
+      <h3>{{ tag[0] }}</h3>
+      <ul>
+        {% for post in tag[1] limit:5 %}
+          <li><a href="{{ post.link }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}

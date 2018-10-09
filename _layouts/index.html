@@ -1,0 +1,46 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Learn more, connect with or contact Ryan Cook, a marketing professional currently in Asheville, NC.">
+        <meta name="author" content="Ryan Cook">
+        <link rel="icon" href="img/favicon.ico">
+        <!-- CSS FILES -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+        {% feed_meta %}
+        {% seo %}
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $( this ).toggleClass("uk-active");
+            });
+        });
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121928594-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-121928594-1');
+        </script>
+
+  </head>
+  <body>
+    {{ content }}
+    {% include footer.html %}
+      <div id="particles-js"></div>
+    </div>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script async src="/assets/js/particles.json"></script>
+  </body>
+</html>
