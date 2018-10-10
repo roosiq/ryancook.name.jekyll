@@ -1,4 +1,3 @@
-<!doctype html>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -34,7 +33,44 @@
   </head>
   <body>
     {% include navigation.html %}
-    {{ content }}
+    <div class="uk-background-muted">
+        <div class="uk-padding uk-container uk-container-small">
+            <div class="button-container">
+
+                {% assign filtered_notes = site.notes | where: 'slug', page.name %}
+                {% for note in filtered_notes %}
+                <h4 class="uk-h2 uk-text-bold uk-text-capitalize">{{ note.name }}</h4>
+                <p>{{ note.content | markdownify }}</p>
+                {% endfor %}
+                <p class="uk-text-meta">Select your tag(s) below:</p>
+
+                {% assign filtered_posts = site.posts | where: 'tags', page.name %}
+                {% for post in filtered_posts %}
+                    <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggle{{ post.subtag | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ post.subtag }}</button>
+                {% endfor %}
+
+                <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
+                    <a class="clear-link" href="">clear all</a>
+                </div>
+            </div>
+
+            <div class="uk-container uk-padding">
+            {% for post in filtered_posts %}
+                {% if post.group contains "note" %}
+                <ul class="uk-list uk-list-small uk-list-inline toggle{{ post.subtag | slugify }} toggle-animation-queued">
+                    <li><a class="uk-link-text" href="{{ post.link }}" target="_blank">{{ post.title }}</a>
+                        <span class="uk-text-meta"> | tag: {{ post.subtag }} | added {{ post.date | date: "%m/%d/%y" }} </span>
+                    </li>
+                </ul>
+                {% endif %}
+            {% endfor %}
+            </div>
+
+            {% for post in filtered_posts %}
+            <p class="toggle{{ post.subtag | slugify }}" hidden></p>
+            {% endfor %}
+        </div>
+    </div>
     {% include footer.html %}
     {% include offcanvas.html %}
 

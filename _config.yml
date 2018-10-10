@@ -8,7 +8,6 @@ twitter:
   card: summary
 github_username:  roosiq
 
-
 collections:
   notes:
     output: true

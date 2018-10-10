@@ -1,5 +1,6 @@
 ---
 short_name: content
-name: Content
+name: content
+layout: note
 ---
-CONTENT - Ted has been eating fruit since he was baby.
+content - Ted has been eating fruit since he was baby.

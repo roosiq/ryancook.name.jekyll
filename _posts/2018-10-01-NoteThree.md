@@ -2,7 +2,8 @@
 title: Conversion rate optimization
 group: note
 categories: note
+subtag: serping
 tags:
-    - CRO
+    - cro
 link: https://getuikit.com/docs/navbar
 ---
