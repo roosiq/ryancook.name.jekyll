@@ -37,8 +37,8 @@ title: Home
                 <h4 class="uk-h2 uk-text-bold">A Collection of Notes for Modern Marketers:</h4>
                 <p class="uk-text-meta">Select your topic(s) below:</p>
 
-
-                {% for category in site.categories %}
+                {% assign sorted_categories = site.categories | sort: categories %}
+                {% for category in sorted_categories %}
                 <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggle{{ category[0] | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ category[0] }}</button>
                 {% endfor %}
 
@@ -47,7 +47,7 @@ title: Home
                 </div>
             </div>
 
-            {% for category in site.categories %}
+            {% for category in sorted_categories %}
 
                 <div class="uk-container uk-padding toggle{{ category[0] | slugify }} toggle-animation-queued">
                     <h3 class="uk-heading-divider uk-text-bold">
@@ -64,9 +64,9 @@ title: Home
                         {% if post.group contains "note" %}
                         <li><a class="uk-link-text" href="{{ post.link }}" target="_blank">{{ post.title }}</a>
                             <span class="uk-text-meta"> | added {{ post.date | date: "%m/%d/%y" }}</span>
-
-                        </li>
                         {% endif %}
+                        </li>
+
                         {% endfor %}
                     </ul>
                 </div>

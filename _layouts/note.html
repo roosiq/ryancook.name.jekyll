@@ -46,7 +46,8 @@
 
 
                 {% assign filtered_posts = site.posts | where: 'categories', page.short_name %}
-                {% assign unique_tags = filtered_posts | group_by:"tags" %}
+                {% assign double_filtered_posts = filtered_posts | where: 'group', 'note' %}
+                {% assign unique_tags = double_filtered_posts | group_by:"tags" %}
                 {% for name in unique_tags %}
                     <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggle{{ name.name | remove: '[' | remove: ']' | remove: '"' | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ name.name | remove: '[' | remove: ']' | remove: '"'}}</button>
                 {% endfor %}
