@@ -37,16 +37,18 @@
         <div class="uk-padding uk-container uk-container-small">
             <div class="button-container">
 
-                {% assign filtered_notes = site.notes | where: 'slug', page.name %}
+                {% assign filtered_notes = site.notes | where: 'slug', page.slug %}
                 {% for note in filtered_notes %}
                 <h4 class="uk-h2 uk-text-bold uk-text-capitalize">{{ note.name }}</h4>
                 <p>{{ note.content | markdownify }}</p>
                 {% endfor %}
                 <p class="uk-text-meta">Select your tag(s) below:</p>
 
-                {% assign filtered_posts = site.posts | where: 'tags', page.name %}
-                {% for post in filtered_posts %}
-                    <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggle{{ post.subtag | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ post.subtag }}</button>
+
+                {% assign filtered_posts = site.posts | where: 'categories', page.short_name %}
+                {% assign unique_tags = filtered_posts | group_by:"tags" %}
+                {% for name in unique_tags %}
+                    <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggle{{ name.name | remove: '[' | remove: ']' | remove: '"' | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ name.name | remove: '[' | remove: ']' | remove: '"'}}</button>
                 {% endfor %}
 
                 <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
@@ -57,18 +59,20 @@
             <div class="uk-container uk-padding">
             {% for post in filtered_posts %}
                 {% if post.group contains "note" %}
-                <ul class="uk-list uk-list-small uk-list-inline toggle{{ post.subtag | slugify }} toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggle{{ post.tags[0] | slugify }} toggle-animation-queued">
                     <li><a class="uk-link-text" href="{{ post.link }}" target="_blank">{{ post.title }}</a>
-                        <span class="uk-text-meta"> | tag: {{ post.subtag }} | added {{ post.date | date: "%m/%d/%y" }} </span>
+                        <span class="uk-text-meta"> | tag: {{ post.tags[0] }} | added {{ post.date | date: "%m/%d/%y" }} </span>
                     </li>
                 </ul>
                 {% endif %}
             {% endfor %}
             </div>
 
-            {% for post in filtered_posts %}
-            <p class="toggle{{ post.subtag | slugify }}" hidden></p>
+            {% for name in unique_tags %}
+            <p class="toggle{{ name.name | remove: '[' | remove: ']' | remove: '"' | slugify }}" hidden></p>
             {% endfor %}
+
+
         </div>
     </div>
     {% include footer.html %}
@@ -77,7 +81,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js"></script>
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script async src="/assets/js/particles.json"></script>
   </body>
 </html>

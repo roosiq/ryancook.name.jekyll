@@ -14,12 +14,12 @@ title: Home
                     <div class="uk-margin-small-left">
                         <ul class="uk-list uk-list-large uk-width-2-3@m uk-width uk-align-center">
 
-                            {% assign notes = site.posts | where: 'categories', "note" %}
+                            {% assign notes = site.posts | where: 'group', "note" %}
                             {% for post in notes limit:1 %}
                             <li><b>Latest Note:</b> {{ post.title }} | <a class="uk-link-text uk-text-meta" href="/notes">see more</a></li>
                             {% endfor %}
 
-                            {% assign thoughts = site.posts | where: 'categories', "thought" %}
+                            {% assign thoughts = site.posts | where: 'group', "thought" %}
                             {% for post in thoughts limit:1 %}
                             <li><b>Latest writings: </b> <a class="uk-link-text" href="{{ post.url }}">{{ post.title }}</a> | <span class="uk-text-meta"><span data-uk-icon="icon: future"></span> {{ post.content | number_of_words }} words</span></li>
                             {% endfor %}
@@ -38,8 +38,8 @@ title: Home
                 <p class="uk-text-meta">Select your topic(s) below:</p>
 
 
-                {% for tag in site.tags %}
-                <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggle{{ tag[0] | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ tag[0] }}</button>
+                {% for category in site.categories %}
+                <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggle{{ category[0] | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ category[0] }}</button>
                 {% endfor %}
 
                 <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
@@ -47,12 +47,12 @@ title: Home
                 </div>
             </div>
 
-            {% for tag in site.tags %}
+            {% for category in site.categories %}
 
-                <div class="uk-container uk-padding toggle{{ tag[0] | slugify }} toggle-animation-queued">
+                <div class="uk-container uk-padding toggle{{ category[0] | slugify }} toggle-animation-queued">
                     <h3 class="uk-heading-divider uk-text-bold">
-                        {{ tag[0] }}
-                    <a href="/notes/{{ tag[0] | slugify }}">
+                        {{ category[0] }}
+                    <a href="/notes/{{ category[0] | slugify }}">
                         <span class="uk-float-right uk-transition-toggle uk-text-muted" uk-icon="icon: arrow-right; ratio: 2">
                             <span class="uk-transition-fade uk-text-meta">see all</span>
                         </span>
@@ -60,7 +60,7 @@ title: Home
                     </h3>
 
                     <ul class="uk-list uk-list-small uk-list-inline">
-                        {% for post in tag[1] limit:5 %}
+                        {% for post in category[1] limit:5 %}
                         {% if post.group contains "note" %}
                         <li><a class="uk-link-text" href="{{ post.link }}" target="_blank">{{ post.title }}</a>
                             <span class="uk-text-meta"> | added {{ post.date | date: "%m/%d/%y" }}</span>
@@ -73,9 +73,9 @@ title: Home
 
             {% endfor %}
 
-            {% for tag in site.tags %}
-            {% if post.categories contains "note" %}
-            <p class="toggle{{ tag[0] | slugify }}" hidden></p>
+            {% for category in site.categories %}
+            {% if post.group contains "note" %}
+            <p class="toggle{{ category[0] | slugify }}" hidden></p>
             {% endif %}
             {% endfor %}
         </div>

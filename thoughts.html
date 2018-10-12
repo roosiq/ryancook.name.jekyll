@@ -19,8 +19,8 @@ title: Thoughts
             <div class="uk-container uk-container-small">
                 <div class="uk-grid" data-ukgrid>
                     <div class="">
-                        
-                        {% assign thoughts = site.posts | where: 'categories', "thought" %}
+
+                        {% assign thoughts = site.posts | where: 'group', "thought" %}
                         {% for post in thoughts %}
                         <article class="uk-section uk-section-small uk-padding-remove-top">
                             <header>
