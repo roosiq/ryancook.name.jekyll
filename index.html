@@ -39,11 +39,11 @@ title: Home
 
                 {% assign sorted_categories = site.categories | sort: categories %}
                 {% for category in sorted_categories %}
-                <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggle{{ category[0] | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ category[0] }}</button>
+                <button id="btn-clear" class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggle{{ category[0] | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ category[0] }}</button>
                 {% endfor %}
 
                 <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
-                    <a class="clear-link" href="">clear all</a>
+                    <button class="uk-button uk-button-link uk-link-muted clear-link">clear all</button>
                 </div>
             </div>
 
@@ -73,11 +73,11 @@ title: Home
 
             {% endfor %}
 
-            {% for category in site.categories %}
+            <!-- {% for category in site.categories %}
             {% if post.group contains "note" %}
             <p class="toggle{{ category[0] | slugify }}" hidden></p>
             {% endif %}
-            {% endfor %}
+            {% endfor %} -->
         </div>
     </div>
 
