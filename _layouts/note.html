@@ -1,4 +1,4 @@
-<!DOCTYPE html>
++<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -49,18 +49,18 @@
                 {% assign double_filtered_posts = filtered_posts | where: 'group', 'note' %}
                 {% assign unique_tags = double_filtered_posts | group_by:"tags" %}
                 {% for name in unique_tags %}
-                    <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggle{{ name.name | remove: '[' | remove: ']' | remove: '"' | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ name.name | remove: '[' | remove: ']' | remove: '"'}}</button>
+                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .toggle{{ name.name | remove: '[' | remove: ']' | remove: '"' | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ name.name | remove: '[' | remove: ']' | remove: '"'}}</button>
                 {% endfor %}
 
-                <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
+                <!-- <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
                     <a class="clear-link" href="">clear all</a>
-                </div>
+                </div> -->
             </div>
 
             <div class="uk-container uk-padding">
             {% for post in filtered_posts %}
                 {% if post.group contains "note" %}
-                <ul class="uk-list uk-list-small uk-list-inline toggle{{ post.tags[0] | slugify }} toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggle{{ post.tags[0] | slugify }} toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="{{ post.link }}" target="_blank">{{ post.title }}</a>
                         <span class="uk-text-meta"> | tag: {{ post.tags[0] }} | added {{ post.date | date: "%m/%d/%y" }} </span>
                     </li>

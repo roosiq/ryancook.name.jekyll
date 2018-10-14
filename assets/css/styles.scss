@@ -55,7 +55,10 @@ html, body {
 .li-short {
   line-height: 1.25;
 }
-
+.uk-accordion-title::after {
+  width: 3em !important;
+  color: #999999 !important;
+}
 
 @media screen and (max-width: 600px) {
     .no-m {

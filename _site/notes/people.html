@@ -1,4 +1,4 @@
-<!DOCTYPE html>
++<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
         <title>People</title>
         <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
-        <link type="application/atom+xml" rel="alternate" href="https://ryancook.name/feed.xml" title="Ryan Cook" />
+        <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ryan Cook" />
         <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>People | Ryan Cook</title>
 <meta name="generator" content="Jekyll v3.8.4" />
@@ -19,14 +19,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="people - Ted has been eating fruit since he was baby." />
 <meta property="og:description" content="people - Ted has been eating fruit since he was baby." />
-<link rel="canonical" href="https://ryancook.name/notes/people.html" />
-<meta property="og:url" content="https://ryancook.name/notes/people.html" />
+<link rel="canonical" href="http://localhost:4000/notes/people.html" />
+<meta property="og:url" content="http://localhost:4000/notes/people.html" />
 <meta property="og:site_name" content="Ryan Cook" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@ryancook_mba" />
 <meta name="twitter:creator" content="@Ryan Cook" />
 <script type="application/ld+json">
-{"description":"people - Ted has been eating fruit since he was baby.","author":{"@type":"Person","name":"Ryan Cook"},"@type":"WebPage","url":"https://ryancook.name/notes/people.html","headline":"People","@context":"http://schema.org"}</script>
+{"description":"people - Ted has been eating fruit since he was baby.","author":{"@type":"Person","name":"Ryan Cook"},"@type":"WebPage","url":"http://localhost:4000/notes/people.html","headline":"People","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -113,20 +113,20 @@
                 
                 
                 
-                    <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggleteams; animation: uk-animation-fade; queued: true; duration: 300">teams</button>
+                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .toggleteams; animation: uk-animation-fade; queued: true; duration: 300">teams</button>
                 
-                    <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .togglepersonality; animation: uk-animation-fade; queued: true; duration: 300">personality</button>
+                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .togglepersonality; animation: uk-animation-fade; queued: true; duration: 300">personality</button>
                 
 
-                <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
+                <!-- <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
                     <a class="clear-link" href="">clear all</a>
-                </div>
+                </div> -->
             </div>
 
             <div class="uk-container uk-padding">
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline toggleteams toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggleteams toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://www.intercom.com/blog/podcasts/aligning-sales-and-marketing-with-intercoms-brian-kotlyar-and-jeff-serlin/" target="_blank">Aligning Sales & Marketing with Intercom (podcast)</a>
                         <span class="uk-text-meta"> | tag: teams | added 10/03/18 </span>
                     </li>
@@ -134,7 +134,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline toggleteams toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggleteams toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://www.ideou.com/blogs/inspiration/how-to-prototype-organizational-change" target="_blank">Advanced Tactics for Dynamic Search Ads</a>
                         <span class="uk-text-meta"> | tag: teams | added 09/20/18 </span>
                     </li>
@@ -142,7 +142,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline togglepersonality toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline togglepersonality toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://www.16personalities.com/free-personality-test" target="_blank">NERIS Type Explorer</a>
                         <span class="uk-text-meta"> | tag: personality | added 10/31/17 </span>
                     </li>
@@ -178,7 +178,7 @@
             </div>
         </div>
         <div>
-            <h4 class="uk-heading uk-text-bold">subscribe to updates (monthly):</h4>
+            <h4 class="uk-heading uk-text-bold">subscribe to occasional updates:</h4>
             <form class="uk-form-horizontal">
                 <div class="uk-margin-large-bottom">
                     <div uk-form-custom="target: true">

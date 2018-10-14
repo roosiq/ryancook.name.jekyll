@@ -1,4 +1,4 @@
-<!DOCTYPE html>
++<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
         <title>Seo</title>
         <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
-        <link type="application/atom+xml" rel="alternate" href="https://ryancook.name/feed.xml" title="Ryan Cook" />
+        <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ryan Cook" />
         <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Seo | Ryan Cook</title>
 <meta name="generator" content="Jekyll v3.8.4" />
@@ -19,14 +19,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Search Engine Optimization - Ted has been eating fruit since he was baby." />
 <meta property="og:description" content="Search Engine Optimization - Ted has been eating fruit since he was baby." />
-<link rel="canonical" href="https://ryancook.name/notes/SEO.html" />
-<meta property="og:url" content="https://ryancook.name/notes/SEO.html" />
+<link rel="canonical" href="http://localhost:4000/notes/SEO.html" />
+<meta property="og:url" content="http://localhost:4000/notes/SEO.html" />
 <meta property="og:site_name" content="Ryan Cook" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@ryancook_mba" />
 <meta name="twitter:creator" content="@Ryan Cook" />
 <script type="application/ld+json">
-{"description":"Search Engine Optimization - Ted has been eating fruit since he was baby.","author":{"@type":"Person","name":"Ryan Cook"},"@type":"WebPage","url":"https://ryancook.name/notes/SEO.html","headline":"Seo","@context":"http://schema.org"}</script>
+{"description":"Search Engine Optimization - Ted has been eating fruit since he was baby.","author":{"@type":"Person","name":"Ryan Cook"},"@type":"WebPage","url":"http://localhost:4000/notes/SEO.html","headline":"Seo","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -113,32 +113,30 @@
                 
                 
                 
-                    <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .togglealgorithm; animation: uk-animation-fade; queued: true; duration: 300">algorithm</button>
+                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .togglealgorithm; animation: uk-animation-fade; queued: true; duration: 300">algorithm</button>
                 
-                    <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .togglecontent; animation: uk-animation-fade; queued: true; duration: 300">content</button>
+                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .togglecontent; animation: uk-animation-fade; queued: true; duration: 300">content</button>
                 
-                    <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggletechnical; animation: uk-animation-fade; queued: true; duration: 300">technical</button>
+                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .toggletechnical; animation: uk-animation-fade; queued: true; duration: 300">technical</button>
                 
-                    <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggleblack-hat; animation: uk-animation-fade; queued: true; duration: 300">black hat</button>
+                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .toggleblack-hat; animation: uk-animation-fade; queued: true; duration: 300">black hat</button>
                 
-                    <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .toggleanalytics; animation: uk-animation-fade; queued: true; duration: 300">analytics</button>
+                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .toggleanalytics; animation: uk-animation-fade; queued: true; duration: 300">analytics</button>
                 
-                    <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .togglequality; animation: uk-animation-fade; queued: true; duration: 300">quality</button>
+                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .togglequality; animation: uk-animation-fade; queued: true; duration: 300">quality</button>
                 
-                    <button class="uk-button uk-button-default uk-button-small uk-active" type="button" uk-toggle="target: .togglepolicy; animation: uk-animation-fade; queued: true; duration: 300">policy</button>
+                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .togglepolicy; animation: uk-animation-fade; queued: true; duration: 300">policy</button>
                 
 
-                <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
+                <!-- <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
                     <a class="clear-link" href="">clear all</a>
-                </div>
+                </div> -->
             </div>
 
             <div class="uk-container uk-padding">
             
                 
-            
-                
-                <ul class="uk-list uk-list-small uk-list-inline togglealgorithm toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline togglealgorithm toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://www.thehoth.com/blog/google-medic-update/" target="_blank">Google's Medic Update&#58 How to fix your website if you were hit</a>
                         <span class="uk-text-meta"> | tag: algorithm | added 09/26/18 </span>
                     </li>
@@ -146,7 +144,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline togglecontent toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline togglecontent toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://medium.com/swlh/how-to-start-a-blog-in-the-most-cluttered-marketplace-in-history-ef50db328a09" target="_blank">How to Start a Blog in The Most Cluttered Marketplace In History</a>
                         <span class="uk-text-meta"> | tag: content | added 09/24/18 </span>
                     </li>
@@ -154,7 +152,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline togglecontent toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline togglecontent toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://www.briggsby.com/on-page-seo-for-nlp" target="_blank">On-page SEO for Natural Language Processing (NLP)</a>
                         <span class="uk-text-meta"> | tag: content | added 07/17/18 </span>
                     </li>
@@ -162,7 +160,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline togglecontent toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline togglecontent toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://sparktoro.com/blog/resources/10x-content-by-rand-fishkin/" target="_blank">119 Examples of 10X Content (by Rand Fishkin)</a>
                         <span class="uk-text-meta"> | tag: content | added 07/17/18 </span>
                     </li>
@@ -170,7 +168,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://www.slideshare.net/goralewicz/smx-london-technical-seo-in-2018-98065359" target="_blank">Technical SEO in 2018.</a>
                         <span class="uk-text-meta"> | tag: technical | added 05/28/18 </span>
                     </li>
@@ -178,7 +176,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://www.slideshare.net/MariaCielak/what-seos-need-to-know-about-javascript-and-pwa-98068577" target="_blank">What SEO's need to know about JavaScript and PWA</a>
                         <span class="uk-text-meta"> | tag: technical | added 05/28/18 </span>
                     </li>
@@ -186,7 +184,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline toggleblack-hat toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggleblack-hat toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="http://www.tomanthony.co.uk/blog/google-xml-sitemap-auth-bypass-black-hat-seo-bug-bounty" target="_blank">Google bug bounty for security exploit that influences search results</a>
                         <span class="uk-text-meta"> | tag: black hat | added 03/30/18 </span>
                     </li>
@@ -194,7 +192,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="http://www.seobythesea.com/services-from-seo-by-the-sea/seo-site-audit-and-recommendations/" target="_blank">Questions for a Technical SEO Audit</a>
                         <span class="uk-text-meta"> | tag: technical | added 03/18/18 </span>
                     </li>
@@ -202,7 +200,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://optimisey.com/seo-advice/oap-ninja-version-3-walkthrough-stress-free-version/" target="_blank">OAP.Ninja Version 3 Walkthrough - The Stress Free Version</a>
                         <span class="uk-text-meta"> | tag: technical | added 03/09/18 </span>
                     </li>
@@ -210,7 +208,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://technicalseo.expert/" target="_blank">Welcome to the SEO Matrix</a>
                         <span class="uk-text-meta"> | tag: technical | added 03/08/18 </span>
                     </li>
@@ -218,7 +216,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://www.aleydasolis.com/english/international-seo-tools/hreflang-tags-generator/" target="_blank">The hrefland Tags Generator by @Aleyda</a>
                         <span class="uk-text-meta"> | tag: technical | added 02/16/18 </span>
                     </li>
@@ -226,7 +224,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline toggleanalytics toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggleanalytics toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://www.seroundtable.com/new-google-search-console-out-25044.html" target="_blank">New Google Search Console is Rolling Out with 16 Months of Data</a>
                         <span class="uk-text-meta"> | tag: analytics | added 01/10/18 </span>
                     </li>
@@ -234,7 +232,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://massivekontent.com/techseo-boost-2017" target="_blank">87 Takeaways from TechSEO Boost 2017</a>
                         <span class="uk-text-meta"> | tag: technical | added 12/24/17 </span>
                     </li>
@@ -242,7 +240,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggletechnical toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://www.keylimetoolbox.com/news/moving-http-https-step-step-guide-avoiding-seo-pitfalls-maximizing-google-organic-traffic/" target="_blank">Moving from HTTP to HTTPS&#58 A Step by Step Guide for Avoiding SEO Pitfalls</a>
                         <span class="uk-text-meta"> | tag: technical | added 10/25/17 </span>
                     </li>
@@ -250,7 +248,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline togglequality toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline togglequality toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://www.searchenginejournal.com/google-low-quality-webpages/215835/" target="_blank">How Google Classifies Webpages as 'Low Quality'</a>
                         <span class="uk-text-meta"> | tag: quality | added 09/28/17 </span>
                     </li>
@@ -258,7 +256,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline togglepolicy toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline togglepolicy toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://support.google.com/webmasters/answer/7474347?visit_id=636749115878972356-3023123139&rd=1" target="_blank">Why is my page missing from Google Search?</a>
                         <span class="uk-text-meta"> | tag: policy | added 11/17/16 </span>
                     </li>
@@ -266,7 +264,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline togglepolicy toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline togglepolicy toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://support.google.com/webmasters/answer/1050724?hl=en&ref_topic=4558960" target="_blank">Search Console's Webmaster FAQ</a>
                         <span class="uk-text-meta"> | tag: policy | added 11/17/16 </span>
                     </li>
@@ -274,7 +272,7 @@
                 
             
                 
-                <ul class="uk-list uk-list-small uk-list-inline toggleanalytics toggle-animation-queued">
+                <ul class="uk-list uk-list-small uk-list-inline toggleanalytics toggle-animation-queued uk-margin-small">
                     <li><a class="uk-link-text" href="https://support.google.com/webmasters/answer/7042828" target="_blank">What are impressions, position, and clicks?</a>
                         <span class="uk-text-meta"> | tag: analytics | added 08/30/16 </span>
                     </li>
@@ -320,7 +318,7 @@
             </div>
         </div>
         <div>
-            <h4 class="uk-heading uk-text-bold">subscribe to updates (monthly):</h4>
+            <h4 class="uk-heading uk-text-bold">subscribe to occasional updates:</h4>
             <form class="uk-form-horizontal">
                 <div class="uk-margin-large-bottom">
                     <div uk-form-custom="target: true">

@@ -1,23 +1,19 @@
 var a = document.querySelectorAll("button#btn-clear");
 var b = document.querySelectorAll('.toggle-animation-queued');
-var c = [1,2,3,4,5,6,7,8,9,0,1];
+var c = [];
 $(document).ready(function(){
     $("button#btn-clear").click(function(){
-
-        // if no buttons in the div are uk-active
-        // add hidden attribute to all children of div below
-        // then toggle this buttons toggle
-
         if($(a).hasClass('uk-active')) {
-          console.log('test');
+          console.log("test-1");
           $( this ).toggleClass("uk-active");
           setTimeout(function() {
               c = document.querySelectorAll('[hidden]');
           }, 1000);
         } else if(c.length == b.length) {
-          console.log('test2');
+          console.log("test-2");
           $( this ).toggleClass("uk-active");
         } else {
+          console.log("test-3");
           $( this ).toggleClass("uk-active");
           for (var i=0; i < b.length; i++) {
             b[i].setAttribute( "hidden", true);
@@ -27,7 +23,6 @@ $(document).ready(function(){
               c = document.querySelectorAll('[hidden]');
           }, 1000);
         }
-        // $( this ).toggleClass("uk-active");
     });
 });
 

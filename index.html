@@ -12,7 +12,7 @@ title: Home
                 </div>
                 <div class="uk-container uk-padding-large uk-padding-remove-top@s">
                     <div class="uk-margin-small-left">
-                        <ul class="uk-list uk-list-large uk-width-1-2@m uk-width uk-align-center">
+                        <ul class="uk-list uk-list-large uk-width-1-2 uk-width-2-3@m uk-width uk-align-center">
 
                             {% assign notes = site.posts | where: 'group', "note" %}
                             {% for post in notes limit:1 %}
@@ -21,7 +21,7 @@ title: Home
 
                             {% assign thoughts = site.posts | where: 'group', "thought" %}
                             {% for post in thoughts limit:1 %}
-                            <li><b>Latest writings: </b> <a class="uk-link-text" href="{{ post.url }}">{{ post.title }}</a> | <span class="uk-text-meta"><span data-uk-icon="icon: future"></span> {{ post.content | number_of_words }} words</span></li>
+                            <li><b>Latest writings: </b> <a class="uk-link-text" href="{{ post.url }}">{{ post.title }}</a> | <span class="uk-text-meta"> {{ post.content | number_of_words }} words</span></li>
                             {% endfor %}
 
                         </ul>
@@ -46,30 +46,39 @@ title: Home
                     <button class="uk-button uk-button-link uk-link-muted clear-link">clear all</button>
                 </div> -->
             </div>
-            <div class="notes-wrapper">
+            <div class="notes-wrapper uk-margin-bottom">
             {% for category in sorted_categories %}
 
                 <div class="uk-container uk-padding uk-padding-remove-bottom toggle{{ category[0] | slugify }} toggle-animation-queued">
-                    <h3 class="uk-heading-divider uk-text-bold uk-padding-remove-bottom">
-                        {{ category[0] }}
-                    <a href="/notes/{{ category[0] | slugify }}">
-                        <span class="uk-float-right uk-transition-toggle uk-text-muted" uk-icon="icon: arrow-right; ratio: 2">
-                            <span class="uk-transition-fade uk-text-meta">see all</span>
-                        </span>
-                    </a>
-                    </h3>
-
-                    <ul class="uk-list uk-list-small uk-list-inline">
+                    <div class="uk-transition-toggle">
+                        <a href="/notes/{{ category[0] | slugify }}">
+                            <h3 class="uk-heading-divider uk-padding-remove-bottom uk-margin-remove-top">
+                                <a class="uk-text-bold uk-heading-link uk-link-reset">{{ category[0] }}</a>
+                            <a href="/notes/{{ category[0] | slugify }}">
+                                <span class="uk-float-right uk-text-muted uk-transition-fade" uk-icon="icon: arrow-right; ratio: 2">
+                                    <span class="uk-text-meta">see all</span>
+                                </span>
+                            </a>
+                            </h3>
+                        </a>
+                    </div>
+                <div>
+                    <ul class="uk-list uk-list-small uk-list-inline" uk-accordion>
                         {% for post in category[1] limit:5 %}
                         {% if post.group contains "note" %}
-                        <li class="li-short"><a class="uk-link-text" href="{{ post.link }}" target="_blank">{{ post.title }}</a>
-                            <span class="uk-text-meta"> | added {{ post.date | date: "%m/%d/%y" }}</span>
+                        <li class="li-short">
+                            <a class="uk-link-text uk-accordion-title uk-text-small" href="{{ post.link }}" target="_blank">{{ post.title }}<span class="uk-text-meta"> | added {{ post.date | date: "%m/%d/%y" }}</span></a>
+                            <div class="uk-accordion-content">
+                              test
+                            </div>
                         {% endif %}
                         </li>
 
                         {% endfor %}
                     </ul>
                 </div>
+
+              </div>
 
             {% endfor %}
             </div>
@@ -82,7 +91,7 @@ title: Home
     </div>
 
     {% for post in thoughts limit:1 %}
-    <div class="uk-background-top-right uk-background-cover uk-padding-large arti uk-margin-top uk-height-large" uk-parallax="bgy: -200" style="background-image: url({{ post.image }});">
+    <div class="uk-background-top-right uk-background-cover uk-padding-large arti uk-height-large" uk-parallax="bgy: -200" style="background-image: url({{ post.image }});">
         <div class="uk-container uk-card uk-card-hover uk-width-4-5@m uk-height-medium uk-background-muted">
             <h4 class="uk-text-lead uk-padding-small uk-padding-remove-bottom uk-padding-remove-left">Latest Writing <span class="uk-text-muted uk-link-muted">/ <a href="/thoughts">Thoughts</a> / {{ post.tags }}</span></h4>
             <article class="uk-section uk-section-small uk-padding-remove-top">
