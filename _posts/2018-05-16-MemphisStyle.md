@@ -4,5 +4,6 @@ group: note
 categories: Design
 tags:
     - branding
+type: article
 link: https://www.shutterstock.com/blog/memphis-style-design-trend-explained
 ---

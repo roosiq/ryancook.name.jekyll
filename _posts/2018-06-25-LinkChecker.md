@@ -4,5 +4,6 @@ group: note
 categories: PPC
 tags:
     - script
+type: tool
 link: https://developers.google.com/google-ads/scripts/docs/solutions/link-checker
 ---

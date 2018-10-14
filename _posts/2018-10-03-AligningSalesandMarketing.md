@@ -4,5 +4,6 @@ group: note
 categories: People
 tags:
     - teams
+type: resource
 link: https://www.intercom.com/blog/podcasts/aligning-sales-and-marketing-with-intercoms-brian-kotlyar-and-jeff-serlin/
 ---

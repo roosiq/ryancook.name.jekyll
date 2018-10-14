@@ -4,5 +4,6 @@ group: note
 categories: Design
 tags:
     - layout
+type: resource
 link: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 ---

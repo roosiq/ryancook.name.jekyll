@@ -53,7 +53,7 @@ title: Home
                     <div class="uk-transition-toggle">
                         <a href="/notes/{{ category[0] | slugify }}">
                             <h3 class="uk-heading-divider uk-padding-remove-bottom uk-margin-remove-top">
-                                <a class="uk-text-bold uk-heading-link uk-link-reset">{{ category[0] }}</a>
+                                <a class="uk-text-bold uk-heading-link uk-link-reset" href="/notes/{{ category[0] | slugify }}">{{ category[0] }}</a>
                             <a href="/notes/{{ category[0] | slugify }}">
                                 <span class="uk-float-right uk-text-muted uk-transition-fade" uk-icon="icon: arrow-right; ratio: 2">
                                     <span class="uk-text-meta">see all</span>
@@ -67,9 +67,11 @@ title: Home
                         {% for post in category[1] limit:5 %}
                         {% if post.group contains "note" %}
                         <li class="li-short">
-                            <a class="uk-link-text uk-accordion-title uk-text-small" href="{{ post.link }}" target="_blank">{{ post.title }}<span class="uk-text-meta"> | added {{ post.date | date: "%m/%d/%y" }}</span></a>
+                            <a class="uk-link-text uk-accordion-title uk-text-small" target="_blank">{{ post.title }} | <span class="uk-label uk-label-{{ post.type }}">{{ post.type }}</span></a>
                             <div class="uk-accordion-content">
                               test
+                              added {{ post.date | date: "%m/%d/%y" }}
+                              href="{{ post.link }}"
                             </div>
                         {% endif %}
                         </li>

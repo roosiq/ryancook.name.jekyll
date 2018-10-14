@@ -4,5 +4,6 @@ group: note
 categories: PPC
 tags:
     - policy
+type: article
 link: https://www.seroundtable.com/google-adwords-to-retire-converted-clicks-22433.html
 ---

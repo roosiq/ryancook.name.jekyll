@@ -4,5 +4,6 @@ group: note
 categories: SEO
 tags:
     - technical
+type: article
 link: https://massivekontent.com/techseo-boost-2017
 ---

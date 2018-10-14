@@ -59,6 +59,26 @@ html, body {
   width: 3em !important;
   color: #999999 !important;
 }
+.uk-label-newsletter {
+  background-color: rgba(229, 64, 60, 0.667);
+  color: #fff;
+}
+.uk-label-article {
+  background-color: rgba(53, 240, 0, 0.5);
+  color: #fff;
+}
+.uk-label-resource {
+  background-color: rgba(0, 192, 217, 0.5);
+  color: #fff;
+}
+.uk-label-influencer {
+  background-color: rgba(88, 10,240, 0.5);
+  color: #fff;
+}
+.uk-label-tool {
+  background-color: rgba(229, 183, 33, 0.667);
+  color: #fff;
+}
 
 @media screen and (max-width: 600px) {
     .no-m {

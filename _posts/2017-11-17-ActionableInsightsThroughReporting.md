@@ -4,5 +4,6 @@ group: note
 categories: Data
 tags:
     - reporting
+type: article
 link: https://support.google.com/google-ads/answer/6255387
 ---

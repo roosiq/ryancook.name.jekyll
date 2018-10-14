@@ -4,5 +4,6 @@ group: note
 categories: SEO
 tags:
     - technical
+type: resource
 link: https://www.keylimetoolbox.com/news/moving-http-https-step-step-guide-avoiding-seo-pitfalls-maximizing-google-organic-traffic/
 ---

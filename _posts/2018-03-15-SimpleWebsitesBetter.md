@@ -1,8 +1,9 @@
 ---
 title: Why "Simple" Websites Are Scientifically Better
 group: note
-categories: CRO
+categories: Design
 tags:
-    - design
+    - cro
+type: article
 link: https://conversionxl.com/blog/why-simple-websites-are-scientifically-better/
 ---

@@ -4,5 +4,6 @@ group: note
 categories: PPC
 tags:
     - policy
+type: article
 link: https://searchengineland.com/sarcasm-aside-how-strict-ppc-advertiser-policies-may-actually-benefit-us-296420/amp
 ---

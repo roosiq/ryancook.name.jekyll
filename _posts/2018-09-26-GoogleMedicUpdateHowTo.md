@@ -4,5 +4,6 @@ group: note
 categories: SEO
 tags:
     - algorithm
+type: article
 link: https://www.thehoth.com/blog/google-medic-update/
 ---

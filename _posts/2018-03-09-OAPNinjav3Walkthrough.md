@@ -4,5 +4,6 @@ group: note
 categories: SEO
 tags:
     - technical
+type: resource
 link: https://optimisey.com/seo-advice/oap-ninja-version-3-walkthrough-stress-free-version/
 ---

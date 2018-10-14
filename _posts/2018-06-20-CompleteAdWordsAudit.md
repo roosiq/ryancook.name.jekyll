@@ -4,5 +4,6 @@ group: note
 categories: PPC
 tags:
     - perform
+type: resource
 link: https://bgtheory.com/blog/the-complete-adwords-audit-part-11-the-lin-rodnitzky-ratio/
 ---

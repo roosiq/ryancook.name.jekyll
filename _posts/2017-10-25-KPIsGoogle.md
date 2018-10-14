@@ -4,5 +4,6 @@ group: note
 categories: PPC
 tags:
     - strategy
+type: article
 link: https://www.thinkwithgoogle.com/intl/en-145/perspectives/global-articles/kpis-essential-framework/
 ---

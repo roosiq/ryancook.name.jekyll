@@ -4,5 +4,6 @@ group: note
 categories: SEO
 tags:
     - content
+type: article
 link: https://www.briggsby.com/on-page-seo-for-nlp
 ---
