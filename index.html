@@ -67,11 +67,22 @@ title: Home
                         {% for post in category[1] limit:5 %}
                         {% if post.group contains "note" %}
                         <li class="li-short">
-                            <a class="uk-link-text uk-accordion-title uk-text-small" target="_blank">{{ post.title }} | <span class="uk-label uk-label-{{ post.type }}">{{ post.type }}</span></a>
+                            <a class="uk-link-text uk-accordion-title uk-text-small" target="_blank">{{ post.title }} <span class="uk-label uk-label-{{ post.type }}">{{ post.type }}</span></a>
                             <div class="uk-accordion-content">
-                              test
-                              added {{ post.date | date: "%m/%d/%y" }}
-                              href="{{ post.link }}"
+                                <div class="uk-card uk-card-default uk-grid-collapse" uk-grid>
+                                    <div class="uk-width-auto"></div>
+                                        <div class="uk-margin-auto uk-margin-auto-vertical uk-padding-small">
+                                            <img class="uk-border-circle" src="{{ post.image }}" alt="" width="100" height="100">
+                                        </div>
+                                    <div class="uk-width-expand@m">
+                                        <div class="uk-card-body uk-padding-small uk-padding-remove-top uk-height-1-1">
+                                          <p class="uk-text-small uk-margin-top">{{ post.content }}</p>
+                                          <p class="uk-text-meta">added {{ post.date | date: "%m/%d/%y" }}<a class="uk-link uk-float-right" target="_blank" href="{{ post.link }}">visit</a></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         {% endif %}
                         </li>

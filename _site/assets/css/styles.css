@@ -51,28 +51,29 @@ html, body {
 .li-short {
   line-height: 1.25; }
 
-.uk-accordion-title::after {
-  width: 3em !important;
-  color: #999999 !important; }
+.uk-label {
+  line-height: 1.25 !important;
+  vertical-align: baseline !important;
+  padding: 0 5px !important; }
 
 .uk-label-newsletter {
-  background-color: rgba(229, 64, 60, 0.667);
+  background-color: rgba(229, 64, 60, 0.333);
   color: #fff; }
 
 .uk-label-article {
-  background-color: rgba(53, 240, 0, 0.5);
+  background-color: rgba(53, 240, 0, 0.25);
   color: #fff; }
 
 .uk-label-resource {
-  background-color: rgba(0, 192, 217, 0.5);
+  background-color: rgba(0, 192, 217, 0.25);
   color: #fff; }
 
 .uk-label-influencer {
-  background-color: rgba(88, 10, 240, 0.5);
+  background-color: rgba(88, 10, 240, 0.25);
   color: #fff; }
 
 .uk-label-tool {
-  background-color: rgba(229, 183, 33, 0.667);
+  background-color: rgba(229, 183, 33, 0.333);
   color: #fff; }
 
 @media screen and (max-width: 600px) {
@@ -147,7 +148,11 @@ html, body {
     margin: 200px 0; }
 
   .super-hero {
-    font-size: 8em; } }
+    font-size: 8em; }
+
+  .uk-accordion-title::after {
+    width: 3em !important;
+    color: #999999 !important; } }
 header {
   background-color: transparent !important; }
 

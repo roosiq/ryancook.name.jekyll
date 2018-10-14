@@ -1,5 +1,5 @@
 ---
-title: dataisbeautiful
+title: reddit.com/r/dataisbeautiful
 group: note
 categories: Data
 tags:
