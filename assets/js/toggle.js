@@ -1,27 +1,27 @@
 var a = document.querySelectorAll("button#btn-clear");
-var b = document.querySelectorAll('.toggle-animation-queued');
-var c = [];
+var b = document.querySelectorAll('div.uk-container.toggle-animation-queued');
+var c = [1,2,3];
 $(document).ready(function(){
     $("button#btn-clear").click(function(){
-        if($(a).hasClass('uk-active')) {
+        if(c.length == b.length) {
+          console.log("test-2");
+          $( this ).toggleClass("uk-active");
+        } else if($(a).hasClass('uk-active')) {
           console.log("test-1");
           $( this ).toggleClass("uk-active");
           setTimeout(function() {
-              c = document.querySelectorAll('[hidden]');
-          }, 1000);
-        } else if(c.length == b.length) {
-          console.log("test-2");
-          $( this ).toggleClass("uk-active");
+              c = document.querySelectorAll('div.uk-container.toggle-animation-queued[hidden]');
+          }, 400);
         } else {
           console.log("test-3");
-          $( this ).toggleClass("uk-active");
           for (var i=0; i < b.length; i++) {
             b[i].setAttribute( "hidden", true);
           }
+          $( this ).toggleClass("uk-active");
           UIkit.toggle( this ).toggle();
           setTimeout(function() {
-              c = document.querySelectorAll('[hidden]');
-          }, 1000);
+              c = document.querySelectorAll('div.uk-container.toggle-animation-queued[hidden]');
+          }, 300);
         }
     });
 });
