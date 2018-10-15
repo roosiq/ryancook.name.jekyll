@@ -5,5 +5,7 @@ categories: SEO
 tags:
     - algorithm
 type: article
+image: /assets/images/medic.jpg
 link: https://www.thehoth.com/blog/google-medic-update/
 ---
+One of the better recovery guides for the August 2018 algo update named "Medic".  If you're seeing drops some time around there, check this one out.

@@ -5,5 +5,6 @@ categories: SEO
 tags:
     - technical
 type: article
+image: /assets/images/
 link: https://www.slideshare.net/MariaCielak/what-seos-need-to-know-about-javascript-and-pwa-98068577
 ---

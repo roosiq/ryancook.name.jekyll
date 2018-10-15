@@ -5,5 +5,6 @@ categories: SEO
 tags:
     - technical
 type: article
+image: /assets/images/
 link: https://massivekontent.com/techseo-boost-2017
 ---

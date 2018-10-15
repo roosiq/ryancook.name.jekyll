@@ -5,5 +5,6 @@ categories: SEO
 tags:
     - content
 type: resource
+image: /assets/images/
 link: https://sparktoro.com/blog/resources/10x-content-by-rand-fishkin/
 ---

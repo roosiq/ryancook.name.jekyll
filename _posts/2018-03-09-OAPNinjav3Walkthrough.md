@@ -5,5 +5,6 @@ categories: SEO
 tags:
     - technical
 type: resource
+image: /assets/images/
 link: https://optimisey.com/seo-advice/oap-ninja-version-3-walkthrough-stress-free-version/
 ---

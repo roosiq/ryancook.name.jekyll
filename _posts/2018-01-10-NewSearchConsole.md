@@ -5,5 +5,6 @@ categories: SEO
 tags:
     - analytics
 type: article
+image: /assets/images/
 link: https://www.seroundtable.com/new-google-search-console-out-25044.html
 ---

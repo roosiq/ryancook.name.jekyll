@@ -5,5 +5,6 @@ categories: PPC
 tags:
     - script
 type: tool
+image: /assets/images/
 link: https://searchengineland.com/a-time-saving-free-script-to-keep-ad-grants-accounts-out-of-trouble-297758
 ---

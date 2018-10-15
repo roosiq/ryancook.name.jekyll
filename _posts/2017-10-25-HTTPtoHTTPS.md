@@ -5,5 +5,6 @@ categories: SEO
 tags:
     - technical
 type: resource
+image: /assets/images/
 link: https://www.keylimetoolbox.com/news/moving-http-https-step-step-guide-avoiding-seo-pitfalls-maximizing-google-organic-traffic/
 ---

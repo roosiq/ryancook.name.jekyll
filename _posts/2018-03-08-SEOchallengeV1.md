@@ -5,5 +5,6 @@ categories: SEO
 tags:
     - technical
 type: resource
+image: /assets/images/
 link: https://technicalseo.expert/
 ---

@@ -5,5 +5,6 @@ categories: Design
 tags:
     - cro
 type: article
+image: /assets/images/
 link: https://conversionxl.com/blog/why-simple-websites-are-scientifically-better/
 ---

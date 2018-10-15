@@ -5,5 +5,6 @@ categories: Design
 tags:
     - branding
 type: article
+image: /assets/images/
 link: https://www.shutterstock.com/blog/memphis-style-design-trend-explained
 ---

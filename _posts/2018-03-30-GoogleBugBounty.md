@@ -5,5 +5,6 @@ categories: SEO
 tags:
     - black hat
 type: article
+image: /assets/images/
 link: http://www.tomanthony.co.uk/blog/google-xml-sitemap-auth-bypass-black-hat-seo-bug-bounty
 ---
