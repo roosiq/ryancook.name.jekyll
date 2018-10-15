@@ -5,6 +5,7 @@ categories: PPC
 tags:
     - policy
 type: article
-image: /assets/images/
-link: https://searchengineland.com/sarcasm-aside-how-strict-ppc-advertiser-policies-may-actually-benefit-us-296420/amp
+image: /assets/images/policy.jpg
+link: https://searchengineland.com/sarcasm-aside-how-strict-ppc-advertiser-policies-may-actually-benefit-us-296420
 ---
+Over the past little while, Google has made significant changes to PPC policy. I've had my own frustrations, but maybe it's for the best?

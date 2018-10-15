@@ -1,7 +1,7 @@
 ---
-short_name: People
-name: people
+short_name: people
+name: Working with Other People (Org Behavioresque)
 slug: people
 layout: note
 ---
-people - Ted has been eating fruit since he was baby.
+Organizational behavior (OB) or organisational behaviour is "the study of human behavior in organizational settings, the interface between human behavior and the organization, and the organization itself".[<sup>1</sup>](https://en.wikipedia.org/wiki/Organizational_behavior)
