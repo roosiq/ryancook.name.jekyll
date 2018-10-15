@@ -1,5 +1,5 @@
 ---
-short_name: people
+short_name: People
 name: Working with Other People (Org Behavioresque)
 slug: people
 layout: note
