@@ -3,7 +3,7 @@ title: How Google Classifies Webpages as 'Low Quality'
 group: note
 categories: SEO
 tags:
-    - quality
+    - technical
 type: article
 image: /assets/images/sej.jpg
 link: https://www.searchenginejournal.com/google-low-quality-webpages/215835/

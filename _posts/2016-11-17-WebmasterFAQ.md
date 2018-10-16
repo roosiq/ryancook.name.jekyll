@@ -3,7 +3,7 @@ title: Search Console's Webmaster FAQ
 group: note
 categories: SEO
 tags:
-    - policy
+    - general
 type: resource
 image: /assets/images/searchconsole.png
 link: https://support.google.com/webmasters/answer/1050724?hl=en&ref_topic=4558960

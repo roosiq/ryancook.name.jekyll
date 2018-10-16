@@ -3,7 +3,7 @@ title: Google's Medic Update&#58 How to fix your website if you were hit
 group: note
 categories: SEO
 tags:
-    - algorithm
+    - strategy
 type: article
 image: /assets/images/medic.jpg
 link: https://www.thehoth.com/blog/google-medic-update/

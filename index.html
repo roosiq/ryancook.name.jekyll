@@ -67,7 +67,7 @@ title: Home
                         {% for post in category[1] limit:5 %}
                         {% if post.group contains "note" %}
                         <li class="li-short">
-                            <a class="uk-link-text uk-accordion-title uk-text-small" target="_blank">{{ post.title }} <span class="uk-label uk-label-{{ post.type }}">{{ post.type }}</span></a>
+                            <a class="uk-link-text uk-accordion-title uk-text-small" target="_blank">{{ post.title }} <span class="uk-label uk-label-home uk-label-{{ post.type }}">{{ post.type }}</span></a>
                             <div class="uk-accordion-content">
                                 <div class="uk-card uk-card-default uk-grid-collapse" uk-grid>
                                     <div class="uk-width-auto"></div>

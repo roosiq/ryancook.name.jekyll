@@ -1,41 +1,10 @@
-+<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Learn more, connect with or contact Ryan Cook, a marketing professional currently in Asheville, NC.">
-        <meta name="author" content="Ryan Cook">
-        <link rel="icon" href="img/favicon.ico">
-        <!-- CSS FILES -->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
-        <title>{{ page.title }}</title>
-        <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
-        {% feed_meta %}
-        {% seo %}
-        <script src='https://www.google.com/recaptcha/api.js'></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
-        $(document).ready(function(){
-            $("button").click(function(){
-                $( this ).toggleClass("uk-active");
-            });
-        });
-        </script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121928594-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-121928594-1');
-        </script>
-
-  </head>
-  <body>
-    {% include navigation.html %}
+---
+layout: default
+title: Notes
+---
     <div class="uk-background-muted">
-        <div class="uk-padding uk-container uk-container-small">
-            <div class="button-container">
+        <div class="uk-padding uk-container">
+            <div class="">
 
                 {% assign filtered_notes = site.notes | where: 'slug', page.slug %}
                 {% for note in filtered_notes %}
@@ -44,46 +13,63 @@
                 {% endfor %}
                 <p class="uk-text-meta">Select your tag(s) below:</p>
 
+                <div uk-filter="target: .js-filter">
+                    <div class="uk-grid-small uk-grid-divider uk-child-width-auto" uk-grid>
+                        <div>
+                            <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                                <li class="uk-active" uk-filter-control><a href="#">All</a></li>
+                            </ul>
+                        </div>
 
-                {% assign filtered_posts = site.posts | where: 'categories', page.short_name %}
+                {% assign filtered_posts = (site.posts | sort: 'tags') | where: 'categories', page.short_name %}
                 {% assign double_filtered_posts = filtered_posts | where: 'group', 'note' %}
                 {% assign unique_tags = double_filtered_posts | group_by:"tags" %}
+                        <div>
+                            <ul class="uk-subnav uk-subnav-pill" uk-margin>
                 {% for name in unique_tags %}
-                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .toggle{{ name.name | remove: '[' | remove: ']' | remove: '"' | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ name.name | remove: '[' | remove: ']' | remove: '"'}}</button>
+                                <li uk-filter-control="filter: [data-tag='{{ name.name | remove: '[' | remove: ']' | remove: '"' | slugify }}']; group: data-tag"><a href="#">{{ name.name | remove: '[' | remove: ']' | remove: '"'}}</a></li>
+                    <!-- <button class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .toggle{{ name.name | remove: '[' | remove: ']' | remove: '"' | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ name.name | remove: '[' | remove: ']' | remove: '"'}}</button> -->
                 {% endfor %}
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="uk-subnav uk-subnav-pill" uk-margin>
 
-                <!-- <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
-                    <a class="clear-link" href="">clear all</a>
-                </div> -->
+                {% assign unique_types = double_filtered_posts  | group_by:"type" %}
+                {% for name in unique_types %}
+                                <li uk-filter-control="filter: [data-type='{{ name.name | remove: '[' | remove: ']' | remove: '"' | slugify }}']; group: data-type"><a href="#">{{ name.name | remove: '[' | remove: ']' | remove: '"'}}</a></li>
+                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="js-filter uk-child-width-1-2@m" uk-grid="masonry: true" uk-height-match="target: > div > .uk-card">
+                {% assign sorted_posts = (double_filtered_posts | sort: 'date') | reverse %}
+                {% for post in sorted_posts %}
+                        <li data-tag="{{ post.tags[0] | slugify }}" data-type="{{ post.type }}">
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-header">
+                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-border-circle" width="40" height="40" src="{{ post.image }}">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-heading uk-margin-remove-bottom uk-text-break uk-text-bold">{{ post.title }}</h4>
+                                            <p class="uk-text-meta uk-margin-remove-top"{{ post.date | date: "%m/%d/%y" }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+                                    <p>{{ post.content }}</p>
+                                </div>
+                                <div class="uk-card-footer">
+                                    <a href="{{ post.link }}" class="uk-button uk-button-text" target="_blank">Read more</a>
+                                </div>
+                            </div>
+
+                        </li>
+                {% endfor %}
+                    </ul>
+                </div>
             </div>
-
-            <div class="uk-container uk-padding">
-            {% for post in filtered_posts %}
-                {% if post.group contains "note" %}
-                <ul class="uk-list uk-list-small uk-list-inline toggle{{ post.tags[0] | slugify }} toggle-animation-queued uk-margin-small">
-                    <li><a class="uk-link-text" href="{{ post.link }}" target="_blank">{{ post.title }}</a>
-                        <span class="uk-text-meta"> | tag: {{ post.tags[0] }} | added {{ post.date | date: "%m/%d/%y" }} </span>
-                    </li>
-                </ul>
-                {% endif %}
-            {% endfor %}
-            </div>
-
-            {% for name in unique_tags %}
-            <p class="toggle{{ name.name | remove: '[' | remove: ']' | remove: '"' | slugify }}" hidden></p>
-            {% endfor %}
-
-
         </div>
     </div>
-    {% include footer.html %}
-    {% include offcanvas.html %}
-
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script async src="../assets/js/particles.json"></script>
-    <script src="../assets/js/toggle.js"></script>
-  </body>
-</html>

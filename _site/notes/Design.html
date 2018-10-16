@@ -1,4 +1,4 @@
-+<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
         <title>Design</title>
         <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
-        <link type="application/atom+xml" rel="alternate" href="https://ryancook.name/feed.xml" title="Ryan Cook" />
+        <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ryan Cook" />
         <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Design | Ryan Cook</title>
 <meta name="generator" content="Jekyll v3.8.4" />
@@ -19,14 +19,16 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Web development is the work involved in developing a web site for the Internet (World Wide Web) or an intranet (a private network).1 Web design encompasses many different skills and disciplines in the production and maintenance of websites.2" />
 <meta property="og:description" content="Web development is the work involved in developing a web site for the Internet (World Wide Web) or an intranet (a private network).1 Web design encompasses many different skills and disciplines in the production and maintenance of websites.2" />
-<link rel="canonical" href="https://ryancook.name/notes/Design.html" />
-<meta property="og:url" content="https://ryancook.name/notes/Design.html" />
+<link rel="canonical" href="http://localhost:4000/notes/Design.html" />
+<meta property="og:url" content="http://localhost:4000/notes/Design.html" />
 <meta property="og:site_name" content="Ryan Cook" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-10-16T01:29:14-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@ryancook_mba" />
 <meta name="twitter:creator" content="@Ryan Cook" />
 <script type="application/ld+json">
-{"description":"Web development is the work involved in developing a web site for the Internet (World Wide Web) or an intranet (a private network).1 Web design encompasses many different skills and disciplines in the production and maintenance of websites.2","author":{"@type":"Person","name":"Ryan Cook"},"@type":"WebPage","url":"https://ryancook.name/notes/Design.html","headline":"Design","@context":"http://schema.org"}</script>
+{"description":"Web development is the work involved in developing a web site for the Internet (World Wide Web) or an intranet (a private network).1 Web design encompasses many different skills and disciplines in the production and maintenance of websites.2","author":{"@type":"Person","name":"Ryan Cook"},"@type":"BlogPosting","url":"http://localhost:4000/notes/Design.html","headline":"Design","dateModified":"2018-10-16T01:29:14-04:00","datePublished":"2018-10-16T01:29:14-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notes/Design.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
         <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -96,9 +98,9 @@
 </header>
 <!--/HEADER-->
 
-    <div class="uk-background-muted">
-        <div class="uk-padding uk-container uk-container-small">
-            <div class="button-container">
+        <div class="uk-background-muted">
+        <div class="uk-padding uk-container">
+            <div class="">
 
                 
                 
@@ -108,82 +110,175 @@
                 
                 <p class="uk-text-meta">Select your tag(s) below:</p>
 
+                <div uk-filter="target: .js-filter">
+                    <div class="uk-grid-small uk-grid-divider uk-child-width-auto" uk-grid>
+                        <div>
+                            <ul class="uk-subnav uk-subnav-pill" uk-margin>
+                                <li class="uk-active" uk-filter-control><a href="#">All</a></li>
+                            </ul>
+                        </div>
 
                 
                 
                 
+                        <div>
+                            <ul class="uk-subnav uk-subnav-pill" uk-margin>
                 
-                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .togglebranding; animation: uk-animation-fade; queued: true; duration: 300">branding</button>
+                                <li uk-filter-control="filter: [data-tag='branding']; group: data-tag"><a href="#">branding</a></li>
+                    <!-- <button class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .togglebranding; animation: uk-animation-fade; queued: true; duration: 300">branding</button> -->
                 
-                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .togglelayout; animation: uk-animation-fade; queued: true; duration: 300">layout</button>
+                                <li uk-filter-control="filter: [data-tag='cro']; group: data-tag"><a href="#">cro</a></li>
+                    <!-- <button class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .togglecro; animation: uk-animation-fade; queued: true; duration: 300">cro</button> -->
                 
-                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .toggletypography; animation: uk-animation-fade; queued: true; duration: 300">typography</button>
+                                <li uk-filter-control="filter: [data-tag='layout']; group: data-tag"><a href="#">layout</a></li>
+                    <!-- <button class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .togglelayout; animation: uk-animation-fade; queued: true; duration: 300">layout</button> -->
                 
-                    <button id="btn-clear" class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .togglecro; animation: uk-animation-fade; queued: true; duration: 300">cro</button>
+                                <li uk-filter-control="filter: [data-tag='typography']; group: data-tag"><a href="#">typography</a></li>
+                    <!-- <button class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .toggletypography; animation: uk-animation-fade; queued: true; duration: 300">typography</button> -->
                 
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="uk-subnav uk-subnav-pill" uk-margin>
 
-                <!-- <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
-                    <a class="clear-link" href="">clear all</a>
-                </div> -->
+                
+                
+                                <li uk-filter-control="filter: [data-type='article']; group: data-type"><a href="#">article</a></li>
+                
+                                <li uk-filter-control="filter: [data-type='resource']; group: data-type"><a href="#">resource</a></li>
+                
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="js-filter uk-child-width-1-2@m" uk-grid="masonry: true" uk-height-match="target: > div > .uk-card">
+                
+                
+                        <li data-tag="branding" data-type="article">
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-header">
+                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-border-circle" width="40" height="40" src="/assets/images/memphis.jpg">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-heading uk-margin-remove-bottom uk-text-break uk-text-bold">Design Trend&#58 A Look at Memphis Style Then and Now</h4>
+                                            <p class="uk-text-meta uk-margin-remove-top"05/16/18</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+                                    <p><p>It’s making a come back, and I’m sure parts of it influenced the development of this site. Pure nostalgia from the 90’s.</p>
+</p>
+                                </div>
+                                <div class="uk-card-footer">
+                                    <a href="https://www.shutterstock.com/blog/memphis-style-design-trend-explained" class="uk-button uk-button-text" target="_blank">Read more</a>
+                                </div>
+                            </div>
+
+                        </li>
+                
+                        <li data-tag="layout" data-type="resource">
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-header">
+                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-border-circle" width="40" height="40" src="/assets/images/grid.png">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-heading uk-margin-remove-bottom uk-text-break uk-text-bold">A Complete Guide to Grid</h4>
+                                            <p class="uk-text-meta uk-margin-remove-top"04/15/18</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+                                    <p><p>A basic guide to one of the newer web dev features, CSS Grid Layout.</p>
+</p>
+                                </div>
+                                <div class="uk-card-footer">
+                                    <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" class="uk-button uk-button-text" target="_blank">Read more</a>
+                                </div>
+                            </div>
+
+                        </li>
+                
+                        <li data-tag="layout" data-type="resource">
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-header">
+                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-border-circle" width="40" height="40" src="/assets/images/code.jpg">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-heading uk-margin-remove-bottom uk-text-break uk-text-bold">Realizing Common Layouts using CSS Grid</h4>
+                                            <p class="uk-text-meta uk-margin-remove-top"04/15/18</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+                                    <p><p>Copy/pastable code to help you get started using grid with common website layouts.</p>
+</p>
+                                </div>
+                                <div class="uk-card-footer">
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout" class="uk-button uk-button-text" target="_blank">Read more</a>
+                                </div>
+                            </div>
+
+                        </li>
+                
+                        <li data-tag="typography" data-type="resource">
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-header">
+                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-border-circle" width="40" height="40" src="/assets/images/zeitung.jpg">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-heading uk-margin-remove-bottom uk-text-break uk-text-bold">Zeitung Flex</h4>
+                                            <p class="uk-text-meta uk-margin-remove-top"04/04/18</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+                                    <p><p>One of the first flex fonts that allows you to programmatically update the font weight.</p>
+</p>
+                                </div>
+                                <div class="uk-card-footer">
+                                    <a href="http://underware.nl/fonts/zeitung/features/Flex/" class="uk-button uk-button-text" target="_blank">Read more</a>
+                                </div>
+                            </div>
+
+                        </li>
+                
+                        <li data-tag="cro" data-type="article">
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-header">
+                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto">
+                                            <img class="uk-border-circle" width="40" height="40" src="/assets/images/simplicity.jpg">
+                                        </div>
+                                        <div class="uk-width-expand">
+                                            <h4 class="uk-heading uk-margin-remove-bottom uk-text-break uk-text-bold">Why "Simple" Websites Are Scientifically Better</h4>
+                                            <p class="uk-text-meta uk-margin-remove-top"03/15/18</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-body uk-padding-remove-top uk-padding-remove-bottom">
+                                    <p><p>The cognitive reasoning behind why less visually complex websites convert better.</p>
+</p>
+                                </div>
+                                <div class="uk-card-footer">
+                                    <a href="https://conversionxl.com/blog/why-simple-websites-are-scientifically-better/" class="uk-button uk-button-text" target="_blank">Read more</a>
+                                </div>
+                            </div>
+
+                        </li>
+                
+                    </ul>
+                </div>
             </div>
-
-            <div class="uk-container uk-padding">
-            
-                
-                <ul class="uk-list uk-list-small uk-list-inline togglebranding toggle-animation-queued uk-margin-small">
-                    <li><a class="uk-link-text" href="https://www.shutterstock.com/blog/memphis-style-design-trend-explained" target="_blank">Design Trend&#58 A Look at Memphis Style Then and Now</a>
-                        <span class="uk-text-meta"> | tag: branding | added 05/16/18 </span>
-                    </li>
-                </ul>
-                
-            
-                
-                <ul class="uk-list uk-list-small uk-list-inline togglelayout toggle-animation-queued uk-margin-small">
-                    <li><a class="uk-link-text" href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">A Complete Guide to Grid</a>
-                        <span class="uk-text-meta"> | tag: layout | added 04/15/18 </span>
-                    </li>
-                </ul>
-                
-            
-                
-                <ul class="uk-list uk-list-small uk-list-inline togglelayout toggle-animation-queued uk-margin-small">
-                    <li><a class="uk-link-text" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout" target="_blank">Realizing Common Layouts using CSS Grid</a>
-                        <span class="uk-text-meta"> | tag: layout | added 04/15/18 </span>
-                    </li>
-                </ul>
-                
-            
-                
-                <ul class="uk-list uk-list-small uk-list-inline toggletypography toggle-animation-queued uk-margin-small">
-                    <li><a class="uk-link-text" href="http://underware.nl/fonts/zeitung/features/Flex/" target="_blank">Zeitung Flex</a>
-                        <span class="uk-text-meta"> | tag: typography | added 04/04/18 </span>
-                    </li>
-                </ul>
-                
-            
-                
-                <ul class="uk-list uk-list-small uk-list-inline togglecro toggle-animation-queued uk-margin-small">
-                    <li><a class="uk-link-text" href="https://conversionxl.com/blog/why-simple-websites-are-scientifically-better/" target="_blank">Why "Simple" Websites Are Scientifically Better</a>
-                        <span class="uk-text-meta"> | tag: cro | added 03/15/18 </span>
-                    </li>
-                </ul>
-                
-            
-            </div>
-
-            
-            <p class="togglebranding" hidden></p>
-            
-            <p class="togglelayout" hidden></p>
-            
-            <p class="toggletypography" hidden></p>
-            
-            <p class="togglecro" hidden></p>
-            
-
-
         </div>
     </div>
+
     <div class="uk-background-default">
     <footer class="uk-padding uk-container uk-container-small">
         <div class="" uk-grid>
