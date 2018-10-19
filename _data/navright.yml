@@ -1,4 +1,4 @@
-- name: Notes
-  link: /blog.html
-- name: Thoughts
-  link: /about.html
+- name: About
+  link: /about
+- name: Submit
+  link: /submit

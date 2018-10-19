@@ -13,25 +13,18 @@
                 <div class="uk-navbar-center-left uk-visible@m"><div>
                     <ul class="uk-navbar-nav">
                       {% for item in site.data.navleft %}
-                        <li {% if page.url == item.link %}class="uk-active"{% endif %}><a href="{{ item.link }}" >{{ item.name }}</a>
+                        <li {% if page.url contains item.link %}class="uk-active"{% endif %}><a href="{{ item.link }}" >{{ item.name }}</a>
                       {% endfor %}
                     </ul>
                     </div></div>
                 <a class="uk-navbar-item uk-logo logo-main uk-text-middle" href="/">RYAN COOK</a>
                 <div class="uk-navbar-center-right uk-visible@m">
                     <div>
-                        <ul class="uk-navbar-nav">
-                          <li>
-                              <a href="#">More</a>
-                              <div class="uk-navbar-dropdown">
-                                  <ul class="uk-nav uk-navbar-dropdown-nav">
-                                      <li class="uk-active"><a href="#">Active</a></li>
-                                      <li><a href="#">Item</a></li>
-                                      <li><a href="#">Item</a></li>
-                                  </ul>
-                              </div>
-                          </li>
-                        </ul>
+                      <ul class="uk-navbar-nav">
+                        {% for item in site.data.navright %}
+                          <li {% if page.url contains item.link %}class="uk-active"{% endif %}><a href="{{ item.link }}" >{{ item.name }}</a>
+                        {% endfor %}
+                      </ul>
                     </div>
                 </div>
             </div>

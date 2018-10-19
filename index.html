@@ -3,89 +3,88 @@ layout: index
 title: Home
 ---
 <div class="wrapper">
-    <div class="uk-container" uk-height-viewport>
-        <div>
-            <div class="hero">
-                <div class="uk-padding-small uk-text-center">
-                    <h1 class="uk-heading-hero logo">RYAN COOK</h1>
-                    <p class="uk-text-meta uk-text-large">notes & thoughts from a digital marketer</p>
+  <div class="uk-container" uk-height-viewport>
+    <div>
+      <div class="hero">
+        <div class="uk-padding-small uk-text-center">
+          <h1 class="uk-heading-hero logo">RYAN COOK</h1>
+          <!-- <p class="uk-text-meta uk-text-large">notes & thoughts from a digital marketer</p> -->
 
-                </div>
-                <div class="uk-text-center uk-padding">
-                    <div class="uk-flex uk-flex-center uk-flex-wrap">
-                        <div class="uk-flex uk-flex-center">
-                            <div class="uk-padding-small uk-padding-remove-top" style="">
-                                <a class="uk-link-heading uk-link-muted" href="/notes"><h4 class="uk-text-uppercase zoom uk-text-reset uk-link-heading">Notes</h4></a>
-                            </div>
-                            <div class="uk-padding-small uk-padding-remove-top">
-                                <h4 class="">/</h4>
-                            </div>
-                            <div class="uk-padding-small uk-padding-remove-top" style="">
-                                <a class="uk-link-heading" href="/thoughts"><h4 class="uk-text-uppercase zoom uk-text-reset uk-link-heading">Thoughts</h4></a>
-                            </div>
-                            <div class="uk-padding-small uk-padding-remove-top uk-visible@s">
-                                <h4 class="">/</h4>
-                            </div>
-                        </div>
-                        <div class="uk-flex uk-flex-center">
-                            <div class="uk-padding-small uk-padding-remove-top" style="">
-                                <a class="uk-link-heading" href="/about"><h4 class="uk-text-uppercase zoom uk-text-reset uk-link-heading">About</h4></a>
-                            </div>
-                            <div class="uk-padding-small uk-padding-remove-top">
-                                <h4 class="">/</h4>
-                            </div>
-                            <div class="uk-padding-small uk-padding-remove-top" style="">
-                                <a class="uk-link-heading" href="/submit"><h4 class="uk-text-uppercase zoom uk-text-reset uk-link-heading">Submit</h4></a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="uk-container uk-padding-large uk-padding-remove-top uk-visible@m">
-                    <div class="uk-margin-small-left">
-                        <ul class="uk-list uk-list-large uk-width-1-2@m uk-width-2-3@s uk-width uk-align-center">
-
-                            {% assign notes = site.posts | where: 'group', "note" %}
-                            {% for post in notes limit:1 %}
-                            <li><b>Latest Note:</b> {{ post.title }} | <a class="uk-link-text uk-text-meta" href="/notes">see more</a></li>
-                            {% endfor %}
-
-                            {% assign thoughts = site.posts | where: 'group', "thought" %}
-                            {% for post in thoughts limit:1 %}
-                            <li><b>Latest Thought: </b> <a class="uk-link-text" href="{{ post.url }}">{{ post.title }}</a> | <span class="uk-text-meta"> {{ post.content | number_of_words }} words</span></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="uk-flex uk-flex-center uk-margin-auto" style="position: absolute; bottom: 20px; left: 0; right: 0;">
-                <h2 class="uk-animation-fade zoom uk-text-reset"><a class="uk-link-heading" href="#scroll-to" uk-icon="icon: chevron-down; ratio: 2" uk-scroll></a></h2>
-            </div>
         </div>
+        <div class="uk-text-center uk-padding">
+          <div class="uk-flex uk-flex-center uk-flex-wrap">
+            <div class="uk-flex uk-flex-center">
+              <div class="uk-padding-small uk-padding-remove-top" style="">
+                <a class="uk-link-heading" href="/notes"><h4 class="uk-text-uppercase zoom uk-text-reset uk-link-heading">Notes</h4></a>
+              </div>
+              <div class="uk-padding-small uk-padding-remove-top">
+                <h4 class="">/</h4>
+              </div>
+              <div class="uk-padding-small uk-padding-remove-top" style="">
+                <a class="uk-link-heading" href="/thoughts"><h4 class="uk-text-uppercase zoom uk-text-reset uk-link-heading">Thoughts</h4></a>
+              </div>
+              <div class="uk-padding-small uk-padding-remove-top uk-visible@s">
+                <h4 class="">/</h4>
+              </div>
+            </div>
+            <div class="uk-flex uk-flex-center">
+              <div class="uk-padding-small uk-padding-remove-top" style="">
+                <a class="uk-link-heading" href="/about"><h4 class="uk-text-uppercase zoom uk-text-reset uk-link-heading">About</h4></a>
+              </div>
+              <div class="uk-padding-small uk-padding-remove-top">
+                <h4 class="">/</h4>
+              </div>
+              <div class="uk-padding-small uk-padding-remove-top" style="">
+                <a class="uk-link-heading" href="/submit"><h4 class="uk-text-uppercase zoom uk-text-reset uk-link-heading">Submit</h4></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="uk-container uk-padding-large uk-padding-remove-top">
+          <div class="uk-margin-small-left">
+            <ul class="uk-list uk-list-large uk-width-1-2@m uk-width-2-3@s uk-width uk-align-center">
+
+              {% assign notes = site.posts | where: 'group', "note" %} {% for post in notes limit:1 %}
+              <li><b>Latest Note:</b> {{ post.title }} | <a class="uk-link-text uk-text-meta" href="/notes">see more</a></li>
+              {% endfor %} {% assign thoughts = site.posts | where: 'group', "thought" %} {% for post in thoughts limit:1 %} {% assign words = post.content | number_of_words %}
+              <li><b>Latest Thought: </b> <a class="uk-link-text" href="{{ post.url }}">{{ post.title }}</a> |
+                <span class="uk-text-meta">
+                                <span uk-icon="icon: future"></span> {% if words
+                < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %}</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="uk-flex uk-flex-center uk-margin-auto scroll-to" style="">
+        <h2 class="zoom uk-text-reset uk-text-muted"><a class="uk-link-heading scroll-to-icon" href="#scroll-to" uk-icon="icon: chevron-down; ratio: 2" uk-scroll></a></h2>
+      </div>
     </div>
+  </div>
 
-    <div id="scroll-to" class="uk-background-muted">
-        <div class="uk-padding uk-container uk-container-small">
-            <div class="button-container">
-                <h4 class="uk-h2 uk-text-bold">A Collection of Notes for Modern Marketers:</h4>
-                <p class="uk-text-meta">Select your topic(s) below:</p>
+  <div id="scroll-to" class="uk-background-muted">
+    <div class="uk-padding uk-container uk-container-small">
+      <div class="button-container">
+        <h4 class="uk-h2 uk-text-bold">A Collection of Notes for Modern Marketers:</h4>
+        <p class="uk-text-meta">Select your topic(s) below:</p>
 
-                {% assign sorted_categories = site.categories | sort: categories %}
-                {% for category in sorted_categories %}
-                <button id="btn-clear" class="uk-button uk-button-default uk-button-small" type="button" data-uk-toggle="target: .toggle{{ category[0] | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ category[0] }}</button>
-                {% endfor %}
+        {% assign sorted_categories = site.categories | sort: categories %} {% for category in sorted_categories %}
+        <button id="btn-clear" class="uk-button uk-button-default uk-button-small" type="button" data-uk-toggle="target: .toggle{{ category[0] | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ category[0] }}</button>
+        {% endfor %}
 
-                <!-- <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
+        <!-- <div class="uk-link-muted uk-text-meta uk-text-right uk-margin-small-top" >
                     <button class="uk-button uk-button-link uk-link-muted clear-link">clear all</button>
                 </div> -->
-            </div>
-            <div class="notes-wrapper uk-margin-bottom">
-            {% for category in sorted_categories %}
+      </div>
+      <div class="notes-wrapper uk-margin-bottom">
+        {% for category in sorted_categories %}
 
-                <div class="uk-container uk-padding uk-padding-remove-bottom toggle{{ category[0] | slugify }} toggle-animation-queued">
-                    <div class="uk-transition-toggle">
-                        <a href="/notes/{{ category[0] | slugify }}">
-                            <h3 class="uk-heading-divider uk-padding-remove-bottom uk-margin-remove-top">
+        <div class="uk-container uk-padding uk-padding-remove-bottom toggle{{ category[0] | slugify }} toggle-animation-queued">
+          <div class="uk-transition-toggle">
+            <a href="/notes/{{ category[0] | slugify }}">
+              <h3 class="uk-heading-divider uk-padding-remove-bottom uk-margin-remove-top">
                                 <a class="uk-text-bold uk-heading-link uk-link-reset" href="/notes/{{ category[0] | slugify }}">{{ category[0] }}</a>
                             <a href="/notes/{{ category[0] | slugify }}">
                                 <span class="uk-float-right uk-text-muted uk-transition-fade" uk-icon="icon: arrow-right; ratio: 2">
@@ -93,62 +92,64 @@ title: Home
                                 </span>
                             </a>
                             </h3>
-                        </a>
+            </a>
+          </div>
+          <div>
+            <ul class="uk-list uk-list-small uk-list-inline" uk-accordion>
+              {% for post in category[1] limit:5 %} {% if post.group contains "note" %}
+              <li class="li-short">
+                <a class="uk-link-text uk-accordion-title uk-text-small" target="_blank">{{ post.title }} <span class="uk-label uk-label-home uk-label-{{ post.type }}">{{ post.type }}</span></a>
+                <div class="uk-accordion-content">
+                  <div class="uk-card uk-card-default uk-grid-collapse" uk-grid>
+                    <div class="uk-width-auto"></div>
+                    <div class="uk-margin-auto uk-margin-auto-vertical uk-padding-small">
+                      <img class="uk-border-circle" src="{{ post.image }}" alt="" width="100" height="100">
                     </div>
-                <div>
-                    <ul class="uk-list uk-list-small uk-list-inline" uk-accordion>
-                        {% for post in category[1] limit:5 %}
-                        {% if post.group contains "note" %}
-                        <li class="li-short">
-                            <a class="uk-link-text uk-accordion-title uk-text-small" target="_blank">{{ post.title }} <span class="uk-label uk-label-home uk-label-{{ post.type }}">{{ post.type }}</span></a>
-                            <div class="uk-accordion-content">
-                                <div class="uk-card uk-card-default uk-grid-collapse" uk-grid>
-                                    <div class="uk-width-auto"></div>
-                                        <div class="uk-margin-auto uk-margin-auto-vertical uk-padding-small">
-                                            <img class="uk-border-circle" src="{{ post.image }}" alt="" width="100" height="100">
-                                        </div>
-                                    <div class="uk-width-expand@m">
-                                        <div class="uk-card-body uk-padding-small uk-padding-remove-top uk-height-1-1">
-                                          <p class="uk-text-small uk-margin-top">{{ post.content }}</p>
-                                          <p class="uk-text-meta">added {{ post.date | date: "%m/%d/%y" }}<a class="uk-link uk-float-right" target="_blank" href="{{ post.link }}">visit</a></p>
+                    <div class="uk-width-expand@m">
+                      <div class="uk-card-body uk-padding-small uk-padding-remove-top uk-height-1-1">
+                        <p class="uk-text-small uk-margin-top">{{ post.content }}</p>
+                        <p class="uk-text-meta">added {{ post.date | date: "%m/%d/%y" }}<a class="uk-link uk-float-right" target="_blank" href="{{ post.link }}">read more</a></p>
 
-                                        </div>
-                                    </div>
-                                </div>
+                      </div>
+                    </div>
+                  </div>
 
-                            </div>
-                        {% endif %}
-                        </li>
-
-                        {% endfor %}
-                    </ul>
                 </div>
+                {% endif %}
+              </li>
 
-              </div>
+              {% endfor %}
+            </ul>
+          </div>
 
-            {% endfor %}
-            </div>
-            <!-- {% for category in site.categories %}
+        </div>
+
+        {% endfor %}
+      </div>
+      <!-- {% for category in site.categories %}
             {% if post.group contains "note" %}
             <p class="toggle{{ category[0] | slugify }}" hidden></p>
             {% endif %}
             {% endfor %} -->
-        </div>
     </div>
+  </div>
 
-    {% for post in thoughts limit:1 %}
-    <div class="uk-background-top-right uk-background-cover uk-padding-large arti uk-height-large" uk-parallax="bgy: -200" style="background-image: url({{ post.image }});">
-        <div class="uk-container uk-card uk-card-hover uk-width-4-5@m uk-height-medium uk-background-muted">
-            <h4 class="uk-text-lead uk-padding-small uk-padding-remove-bottom uk-padding-remove-left">Latest Writing <span class="uk-text-muted uk-link-muted">/ <a href="/thoughts">Thoughts</a> / {{ post.tags }}</span></h4>
-            <article class="uk-section uk-section-small uk-padding-remove-top">
-                <header>
-                    <h2 class="uk-margin-remove-adjacent uk-text-bold uk-margin-small-bottom"><a title="Fusce facilisis tempus magna ac dignissim." class="uk-text-bold uk-link-reset" href="{{ post.url }}">{{ post.title }}</a></h2>
-                    <p class="uk-article-meta">Written on {{ post.date | date_to_string: "ordinal", "US" }}. | {{ post.content | number_of_words }} words</p>
-                </header>
-                <p class="uk-visible@s">{{ post.description }}</p>
-                <a href="{{ post.url }}" title="Read More" class="uk-button uk-button-default uk-button-small">READ MORE</a>
-                <hr>
-            </article>
-        </div>
+  {% for post in thoughts limit:1 %}
+  <div class="uk-background-top-right uk-background-cover uk-padding-large arti uk-height-large" uk-parallax="bgy: -200" style="background-image: url({{ post.image }});">
+    <div class="uk-container uk-card uk-card-hover uk-width-4-5@m uk-height-medium uk-background-muted">
+      <h4 class="uk-padding-small uk-padding-remove-bottom uk-padding-remove-left"><a class="uk-link-reset" href="/thoughts">Thoughts</a> /  <span class="uk-text-muted uk-link-muted">{{ post.tags }}</span></h4>
+      <article class="uk-section uk-section-small uk-padding-remove-top">
+        <header>
+          <h2 class="uk-margin-remove-adjacent uk-text-bold uk-margin-small-bottom"><a title="Fusce facilisis tempus magna ac dignissim." class="uk-text-bold uk-link-reset" href="{{ post.url }}">{{ post.title }}</a></h2>
+          <p class="uk-article-meta">Written on {{ post.date | date_to_string: "ordinal", "US" }}. | <span class="uk-text-meta">
+                      <span uk-icon="icon: future"></span> {% if words
+            < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %}</span>
+          </p>
+        </header>
+        <p class="uk-visible@s">{{ post.description }}</p>
+        <a href="{{ post.url }}" title="Read More" class="uk-button uk-button-default uk-button-small">READ MORE</a>
+        <hr>
+      </article>
     </div>
-    {% endfor %}
+  </div>
+  {% endfor %}
