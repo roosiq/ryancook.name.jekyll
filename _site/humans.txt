@@ -1,0 +1,11 @@
+dave; help with javascript
+marissa; qa testing
+
+photos
+
+icons https://www.smashingmagazine.com/2017/05/free-geometric-ui-icons-ego/
+
+uikit
+jekyll
+netlify
+particles.js
