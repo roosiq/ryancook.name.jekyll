@@ -100,25 +100,32 @@
           <p>Want to be included on this list? Send me your piece and I'll see if it works.</p>
         </div>
       </div>
-      <div class="uk-section uk-section-muted">
-        <div class="uk-container uk-container-small">
-          <div class="uk-grid" data-ukgrid>
-            <div class="">
-              <h2 class="uk-text-bold uk-text-lead">Bringing People and Brands Together</h2>
-              <p>I'm <b>Ryan Cook</b>, a digital marketer currently in Asheville, NC.  I've spent the last 10 years of my life building relationships between brands and customers.
-                Currently, I'm Director of Analytics at Element 360, where I help real estate companies find buyers in the digital space.
-                Previously, I helped ad agencies build effective traditional marketing campaigns through print, video, and radio spots in Miami, FL.</p>
-              <p>I answer questions - most of which I ask myself.</p>
-              <p>I'm exceptionally good at identifying potential customers, crafting strategies to reach those customers, managing campaigns based on the prior, and translating the outcome into normal people words.  I've grown tired of the same monotonous advertising strategies that have become ineffective and tend to alienate potential customers.  </p>
-              <p>I drink 3.5 cups of half-caff coffee a day, enjoy watching good movies & shorts (tv/online/youtube/twitch), and am a retired gamer (over 10,000 hours in two games alone).</p>
-              <p> Thanks for reading, <br />
-                Ryan</p>
+      <div class="uk-tile uk-tile-muted">
+            <div class="uk-container uk-container-small">
+                <form class="uk-padding-small" name="contact" netlify>
+                    <fieldset class="uk-fieldset">
+                        <p class="uk-margin-remove-bottom">Author's Name:</p>
+                        <div class="uk-margin-small">
+                            <input class="uk-input" type="text" name="name" placeholder="Name">
+                        </div>
+                        <p class="uk-margin-remove-bottom">Email (just to let you know if it's included):</p>
+                        <div class="uk-margin-small">
+                            <input class="uk-input" type="email" name="email" placeholder="example@example.com">
+                        </div>
+                        <p class="uk-margin-remove-bottom">Link to Article:</p>
+                        <div class="uk-margin-small">
+                            <input class="uk-input" type="text" name="name" placeholder="https://yourwebsite.io/the-next-big-thing">
+                        </div>
+                        <p class="uk-margin-remove-bottom">Brief Description:</p>
+                        <div class="uk-margin-small">
+                            <textarea class="uk-textarea" type="text" name="description" rows="5" placeholder="Your short description of what's included in the link."></textarea>
+                        </div>
+                        <button class="uk-button uk-button-default" type="submit">Submit</button>
+                    </fieldset>
+                </form>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
     <div class="uk-background-default">
@@ -140,12 +147,12 @@
         </div>
         <div>
             <h4 class="uk-heading uk-text-bold">subscribe to occasional updates:</h4>
-            <form class="uk-form-horizontal">
+            <form class="uk-form-horizontal" name="newsletter" netlify>
                 <div class="uk-margin-large-bottom">
                     <div uk-form-custom="target: true">
-                        <input class="uk-input uk-form-width-large" id="form-horizontal-text" type="text" placeholder="hi@example.com">
+                        <input class="uk-input uk-form-width-large" id="form-horizontal-text" type="email" name="email" placeholder="hi@example.com">
                     </div>
-                    <button class="uk-button uk-button-default">Submit</button>
+                    <button class="uk-button uk-button-default" type="submit">Submit</button>
                 </div>
             </form>
 

@@ -30,7 +30,7 @@ layout: default
                 <h2 class="uk-text-bold">Similar Notes</h2>
                 <div uk-slider>
                     <div class="uk-position-relative uk-visible-toggle" uk-height-match="target: > ul > li > div > div > .uk-card-body">
-                         <ul class="uk-slider-items uk-child-width-1-3@s uk-grid">
+                         <ul class="uk-slider-items uk-child-width-1-3@m uk-grid">
                             {% assign filtered_notes =site.posts | where: 'group', 'note' %}
                             {% for post in filtered_notes %}
                                 {% if post.tags contains page.tags[0] %}
