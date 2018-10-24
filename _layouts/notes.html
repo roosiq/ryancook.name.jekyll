@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/images//favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/images//favicon-16x16.png">
+        <link rel="manifest" href="../assets/images//site.webmanifest">
+        <link rel="mask-icon" href="../assets/images//safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <title>My Collection of {{ page.name }} Tools | {{ site.title }}</title>
+        <meta name="description" content="A curated collection of {{ page.name | downcase }} articles, influencers, newsletters, resources, and tools.">
+        {% seo %}
+        <meta name="author" content="Ryan Cook">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $( this ).toggleClass("uk-active");
+            });
+        });
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121928594-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-121928594-1');
+        </script>
+    </head>
+    <body>
+      {% include navigation.html %}
+      <nav class="uk-navbar-container short-nav uk-dark" uk-navbar>
+          <div class="uk-navbar-center">
+              <ul class="uk-navbar-nav">
+                {% assign sorted = site.notes | sort:'short_name' %}
+                {% for note in sorted %}
+                  <li {% if page.url contains note.slug %}class="uk-active"{% endif %}><a href="{{ note.url | downcase }}">{{ note.short_name }}</a></li>
+                {% endfor %}
+              </ul>
+          </div>
+      </nav>
+      {{ content }}
+      {% include footer.html %}
+      {% include offcanvas.html %}
+
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <script async src="../assets/js/particles.json"></script>
+      <script src="../assets/js/toggle.js"></script>
+    </body>
+</html>
