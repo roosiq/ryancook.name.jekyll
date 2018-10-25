@@ -1,5 +1,5 @@
 ---
-title: GrowthHub
+title: GrowthHub, previously Inbound.org
 group: note
 categories: SEO
 tags:
