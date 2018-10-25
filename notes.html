@@ -14,6 +14,12 @@ description: Categories include&#58 Data, Web Development/Design, Email Marketin
             </div>
             <div>
                 <p>Just a big, organized list of links that I've saved for reference, categorized below.</p>
+                <div class="button-container">
+                    {% assign sorted = site.notes | sort:'short_name' %}
+                    {% for note in sorted %}
+                    <a class="uk-button uk-button-default uk-button-small" href="{{ note.url | downcase }}">{{ note.short_name }}</a>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>

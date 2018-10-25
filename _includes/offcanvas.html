@@ -1,19 +1,37 @@
 <div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
     <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
         <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
+        <a class="uk-logo uk-text-bold uk-text-left uk-light" href="/">RYAN COOK</a>
         <ul class="uk-nav uk-nav-default">
-            {% for item in site.data.navleft %}
-              <li {% if page.url == item.link %}class="uk-active"{% endif %}><a href="{{ item.link }}" >{{ item.name }}</a>
+          <li {% if page.url contains item.link %}class="uk-active"{% endif %}><a href="/notes" >Notes</a></li>
+          <li class="uk-parent">
+              <ul class="uk-nav-sub">
+                {% assign sorted = site.notes | sort:'short_name' %}
+                {% for note in sorted %}
+                  <li {% if page.url contains note.slug %}class="uk-active"{% endif %}><a href="{{ note.url | downcase }}">{{ note.short_name }}</a></li>
+                {% endfor %}
+              </ul>
+          </li>
+          <li {% if page.url == item.link %}class="uk-active"{% endif %}><a href="/thoughts" >Thoughts</a></li>
+
+            {% for item in site.data.navright %}
+              <li {% if page.url == item.link %}class="uk-active"{% endif %}><a href="{{ item.link }}" >{{ item.name }}</a></li>
             {% endfor %}
-            <li>More</li>
-            <li class="uk-parent">
-                <ul class="uk-nav-sub">
-                    <li><a href="#">Sub item</a></li>
-                    <li><a href="#">Sub item</a></li>
-                </ul>
-            </li>
+
         </ul>
-        <h3>Latest:</h3>
-        <p>How to Start a Blog In The Most Cluttered Marketplace In History | <a class="uk-link-text uk-text-meta" href="#">see more</a></p>
+        <div class="uk-padding-small scroll-to">
+            <ul class="uk-list uk-list-large uk-width-1-2@m uk-width-2-3@s uk-width uk-align-center">
+
+              {% assign notes = site.posts | where: 'group', "note" %} {% for post in notes limit:1 %}
+              <li><b>Latest Note:</b> {{ post.title }} | <a class="uk-link-text uk-text-meta" href="/notes">see more</a></li>
+              {% endfor %} {% assign thoughts = site.posts | where: 'group', "thought" %} {% for post in thoughts limit:1 %} {% assign words = post.content | number_of_words %}
+              <li><b>Latest Thought: </b> <a class="uk-link-text" href="{{ post.url }}">{{ post.title }}</a> |
+                <span class="uk-text-meta">
+                                <span uk-icon="icon: future"></span> {% if words
+                < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %}</span>
+              </li>
+              {% endfor %}
+            </ul>
+        </div>
     </div>
 </div>
