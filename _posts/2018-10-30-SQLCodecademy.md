@@ -8,4 +8,4 @@ type: resource
 image: /assets/images/codecademy.jpg
 link: https://www.codecademy.com/courses/learn-sql/
 ---
-Just getting started but looking strong, hopefully I can finish before my trial is up.
+Finished it. Pretty decent. Took notes.
