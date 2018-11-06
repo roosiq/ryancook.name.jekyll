@@ -4,6 +4,30 @@ seo
 data
 
 
+labs:
+- Similar cities explorer
+- Similar zip codes explorer
+--- Use public data on Google Big query
+----- BLS employment
+----- CMS medicare data
+----- EPA air quality
+----- FEC politically charged
+----- noaa_gsod2018 ghcnd_2018 or ghcn_m - weather data https://www.kaggle.com/paultimothymooney/how-to-query-the-noaa-ghcn-daily-weather-data
+----- irs_990
+----- noaa_hurricanes
+----- noaa_earthquakes
+----- noaa_spc - hail / tornado / wind
+----- noaa_tsunami
+----- openaq - air quality
+----- sunroof_solar
+----- usda_nass_agriculture - breakdown of farms?
+----- usfs_fia - forestry?
+----- utility_us - breakdown % of water / land etc
+
+- Look up every political ad
+--- google political ads
+
+
 
 articles:
 complete list of every seo factor and what you can do about it.
