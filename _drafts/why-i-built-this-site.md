@@ -1,0 +1,35 @@
+---
+layout: post
+title: Why I built this site
+group: thought
+tags:
+- content
+description:
+- Over the past 3 years, I have spent countless hours trying to figure out how to
+  do my job better. I've learned a lot and saved a bunch of links.
+image: "../assets/images/why-elephant.jpg"
+
+---
+## This one's for me.
+
+Honestly, I forget things, get distracted, and can't keep up with everything that piques my interest.  I move in and out of phases of incredible drive to learn everything about one topic only to be days behind when I pick them back up again.  I tend to send myself links by slack, email, or save them on my phone.
+
+**It's a combination of things that:**
+- were *useful*.
+- *changed* my frame of mind.
+- made me *feel* something (sometimes stupid).
+- I want to get to *later*.
+
+Much of digital marketing is shrouded in a mist of uncertainty, either due to lack of transparency from other marketers or from the platforms themselves (i.e. Google or Facebook).  I hope to give you what so many of these articles have given me, a spark.  A spark that drives the next search for knowledge, the next opportunity to learn, or the next big idea for your killer piece of content.
+
+#### Specifically, you'll find:
+- Tools to help you save time.
+- Resources so you can be better marketers.
+- Articles that help inspire and challenge what you thought to be true.
+- Influencers who are experts in their field(and where to follow them).
+- Newsletters you can subscribe to for a better pulse on things.
+
+**Since you have taken the time to read this, I truly hope I don't disappoint.  If I do, let me know, and I'll do better.**
+
+
+<p class="uk-text-muted uk-margin-remove-bottom">photo by: <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@hgudka97?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Harshil Gudka"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Harshil Gudka</span></a></p>
