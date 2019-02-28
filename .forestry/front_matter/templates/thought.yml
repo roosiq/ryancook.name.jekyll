@@ -7,17 +7,22 @@ fields:
   label: Layout
   type: text
   hidden: false
-  default: ''
+  default: post
 - name: title
   label: Title
   type: text
+  hidden: false
+  default: Some decent title.
+- name: description
+  label: Description
+  type: list
   hidden: false
   default: ''
 - name: group
   label: Group
   type: text
   hidden: false
-  default: ''
+  default: thought
 - name: tags
   label: Tags
   type: tag_list
@@ -26,10 +31,5 @@ fields:
 - name: image
   label: Image
   type: file
-  hidden: false
-  default: ''
-- name: description
-  label: Description
-  type: list
   hidden: false
   default: ''
