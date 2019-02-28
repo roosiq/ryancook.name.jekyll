@@ -1,8 +1,9 @@
 ---
 layout: notes
 title: Notes
+
 ---
-    <div class="uk-background-muted">
+<div class="uk-background-muted">
         <div class="uk-padding uk-container">
             <div class="">
 
@@ -24,14 +25,7 @@ title: Notes
                 {% assign filtered_posts = (site.posts | sort: 'tags') | where: 'categories', page.short_name %}
                 {% assign double_filtered_posts = filtered_posts | where: 'group', 'note' %}
                 {% assign unique_tags = double_filtered_posts | group_by:"tags" %}
-                        <div>
-                            <ul class="uk-subnav uk-subnav-pill" uk-margin>
-                {% for name in unique_tags %}
-                                <li uk-filter-control="filter: [data-tag='{{ name.name | remove: '[' | remove: ']' | remove: '"' | slugify }}']; group: data-tag"><a href="#">{{ name.name | remove: '[' | remove: ']' | remove: '"'}}</a></li>
-                    <!-- <button class="uk-button uk-active uk-button-default uk-button-small" type="button" uk-toggle="target: .toggle{{ name.name | remove: '[' | remove: ']' | remove: '"' | slugify }}; animation: uk-animation-fade; queued: true; duration: 300">{{ name.name | remove: '[' | remove: ']' | remove: '"'}}</button> -->
-                {% endfor %}
-                            </ul>
-                        </div>
+                        
                         <div>
                             <ul class="uk-subnav uk-subnav-pill" uk-margin>
 
