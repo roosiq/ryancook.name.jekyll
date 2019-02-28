@@ -17,6 +17,7 @@ fields:
     - thought
   name: group
   label: group
+  default: note
 - type: select
   config:
     source:
