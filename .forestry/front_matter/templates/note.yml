@@ -55,6 +55,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _posts/rendering-javascript-for-seo.md
 - _posts/martin-röttgerding.md
 - _posts/how-to-use-keywords-in-google-shopping-campaigns.md
 - _posts/what-great-data-analysts-do.md
