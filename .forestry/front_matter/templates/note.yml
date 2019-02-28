@@ -55,6 +55,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _posts/using-python-for-seo-auditing.md
 - _posts/googlebot-and-web-rendering-service.md
 - _posts/rendering-javascript-for-seo.md
 - _posts/martin-röttgerding.md
