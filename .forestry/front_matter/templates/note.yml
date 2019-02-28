@@ -7,27 +7,42 @@ fields:
   label: Title
   type: text
   hidden: false
-  default: ''
-- name: group
-  label: Group
-  type: text
-  hidden: false
-  default: ''
-- name: categories
+  default: Some decent title.
+- type: select
+  config:
+    source:
+      type: simple
+    options:
+    - note
+    - thought
+  name: group
+  label: group
+- type: select
+  config:
+    source:
+      type: simple
+    options:
+    - SEO
+    - People
+    - PPC
+    - Design
+    - Data
   label: Categories
-  type: tag_list
-  hidden: false
-  default: ''
-- name: tags
-  label: Tags
-  type: tag_list
-  hidden: false
-  default: ''
-- name: type
+  name: categories
+- type: select
+  name: type
+  config:
+    source:
+      type: simple
+      section: posts
+    options:
+    - resource
+    - tool
+    - influencer
+    - article
+    - newsletter
   label: Type
-  type: text
-  hidden: false
-  default: ''
+  default: 
 - name: image
   label: Image
   type: file
