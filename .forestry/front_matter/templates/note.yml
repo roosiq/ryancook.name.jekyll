@@ -55,4 +55,5 @@ fields:
   hidden: false
   default: ''
 pages:
+- _posts/data-points-2-0 - digital-marketing.md
 - _posts/ooo-shiny-gradient-effect.md
