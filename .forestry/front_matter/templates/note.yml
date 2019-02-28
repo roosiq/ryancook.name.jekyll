@@ -54,3 +54,5 @@ fields:
   type: textarea
   hidden: false
   default: ''
+pages:
+- _posts/ooo-shiny-gradient-effect.md
